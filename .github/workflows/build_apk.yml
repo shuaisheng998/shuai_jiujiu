@@ -46,7 +46,8 @@ jobs:
             echo "ERROR: APK not found!"
             exit 1
           fi
-          echo "APK found, size: $(ls -lh build/app/outputs/flutter-apk/app-debug.apk | awk '{print $5}')"
+          cp build/app/outputs/flutter-apk/app-debug.apk app-debug.apk
+          echo "APK ready, size: $(ls -lh app-debug.apk | awk '{print $5}')"
 
       - name: Upload Build Log
         if: always()
@@ -59,5 +60,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: shuai-jiujiu
-          path: build/app/outputs/flutter-apk/app-debug.apk
+          path: app-debug.apk
           if-no-files-found: error
