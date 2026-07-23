@@ -1,0 +1,19 @@
+# Flutter
+.dart_tool/
+.packages
+build/
+*.iml
+.idea/
+.vscode/
+*.lock
+**/generated/
+*.g.dart
+
+# Android
+local.properties
+*.keystore
+key.properties
+
+# iOS
+Pods/
+*.xcworkspace
