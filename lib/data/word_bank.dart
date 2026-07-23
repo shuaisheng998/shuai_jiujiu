@@ -231,7 +231,7 @@ class WordBank {
       {'e': 'spend', 'c': '花费（时间/钱）', 'p': '/spend/', 'd': '动词，人作主语，spend time on/in doing', 'ex': 'I spend two hours doing homework every day.', 'ex_cn': '我每天花两个小时做作业。'},
       {'e': 'bring', 'c': '带来', 'p': '/brɪŋ/', 'd': '动词，bring sth. to 带来（从远方到近处）', 'ex': 'Please bring your notebook tomorrow.', 'ex_cn': '明天请带上你的笔记本。'},
       {'e': 'take', 'c': '拿走；花费；搭乘', 'p': '/teɪk/', 'd': '动词，take sth. to 带去（从近处到远方）', 'ex': 'This is a good example of "take".', 'ex_cn': '这是"take"的一个好例子。'},
-      {'e': 'carry', 'c': '搬运；携带', 'p': '/ˈkæri/', 'd': '动词，carry重物", 'ex': 'Let me carry the heavy box for you.', 'ex_cn': '让我帮你搬这个重箱子。'},
+      {'e': 'carry', 'c': '搬运；携带', 'p': '/ˈkæri/', 'd': '动词，carry重物', 'ex': 'Let me carry the heavy box for you.', 'ex_cn': '让我帮你搬这个重箱子。'},
       {'e': 'catch', 'c': '抓住；赶上（车）', 'p': '/kætʃ/', 'd': '动词，catch a bus 赶公交，catch a cold 感冒', 'ex': 'I need to catch the early bus tomorrow.', 'ex_cn': '我明天需要赶早班公交车。'},
       {'e': 'drive', 'c': '驾驶', 'p': '/draɪv/', 'd': '动词，drive a car 开车，drive sb. to 开车送某人去', 'ex': 'My father drives me to school every day.', 'ex_cn': '我爸爸每天开车送我去上学。'},
       {'e': 'fly', 'c': '飞；乘飞机', 'p': '/flaɪ/', 'd': '动词，fly to Beijing 飞往北京', 'ex': 'I will fly to Beijing next week.', 'ex_cn': '我下周要飞往北京。'},

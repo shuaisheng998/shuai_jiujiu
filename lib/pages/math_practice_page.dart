@@ -601,7 +601,7 @@ class _MathPracticePageState extends State<MathPracticePage>
                       Expanded(
                         child: Text(
                           question.explanation,
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontSize: 13, color: Colors.grey[700]),
                         ),
                       ),
