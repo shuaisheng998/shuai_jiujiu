@@ -344,10 +344,10 @@ class _WordStudyPageState extends State<WordStudyPage>
                           width: double.infinity,
                           padding: const EdgeInsets.all(12),
                           decoration: BoxDecoration(
-                            color: theme.colorScheme.primary.withValues(alpha: 0.08),
+                            color: theme.colorScheme.primary.withOpacity(0.08),
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(
-                              color: theme.colorScheme.primary.withValues(alpha: 0.2),
+                              color: theme.colorScheme.primary.withOpacity(0.2),
                             ),
                           ),
                           child: Row(
@@ -541,12 +541,12 @@ class _WordStudyPageState extends State<WordStudyPage>
                 if (_selectedAnswer != null) {
                   if (index == _selectedAnswer) {
                     bgColor = _isCorrect == true
-                        ? Colors.green.withValues(alpha: 0.15)
-                        : Colors.red.withValues(alpha: 0.15);
+                        ? Colors.green.withOpacity(0.15)
+                        : Colors.red.withOpacity(0.15);
                   }
                   if (_quizOptions[index] == word.chinese &&
                       _selectedAnswer != index) {
-                    bgColor = Colors.green.withValues(alpha: 0.15);
+                    bgColor = Colors.green.withOpacity(0.15);
                   }
                 }
 

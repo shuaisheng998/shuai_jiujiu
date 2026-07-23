@@ -324,7 +324,7 @@ class _MathPracticePageState extends State<MathPracticePage>
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(
-                  color: theme.colorScheme.primary.withValues(alpha: 0.1),
+                  color: theme.colorScheme.primary.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: Text(
@@ -340,7 +340,7 @@ class _MathPracticePageState extends State<MathPracticePage>
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(
-                  color: Colors.orange.withValues(alpha: 0.1),
+                  color: Colors.orange.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: Text(
@@ -383,11 +383,11 @@ class _MathPracticePageState extends State<MathPracticePage>
 
               if (_selectedAnswer != null) {
                 if (index == question.correctIndex) {
-                  bgColor = Colors.green.withValues(alpha: 0.12);
+                  bgColor = Colors.green.withOpacity(0.12);
                   borderColor = Colors.green;
                 } else if (index == _selectedAnswer &&
                     _selectedAnswer != question.correctIndex) {
-                  bgColor = Colors.red.withValues(alpha: 0.12);
+                  bgColor = Colors.red.withOpacity(0.12);
                   borderColor = Colors.red;
                 }
               }
@@ -458,8 +458,8 @@ class _MathPracticePageState extends State<MathPracticePage>
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: _isCorrect == true
-                        ? Colors.green.withValues(alpha: 0.1)
-                        : Colors.red.withValues(alpha: 0.1),
+                        ? Colors.green.withOpacity(0.1)
+                        : Colors.red.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       color: _isCorrect == true
@@ -511,10 +511,10 @@ class _MathPracticePageState extends State<MathPracticePage>
                     padding: const EdgeInsets.symmetric(
                         horizontal: 10, vertical: 5),
                     decoration: BoxDecoration(
-                      color: Colors.purple.withValues(alpha: 0.08),
+                      color: Colors.purple.withOpacity(0.08),
                       borderRadius: BorderRadius.circular(6),
                       border: Border.all(
-                          color: Colors.purple.withValues(alpha: 0.2)),
+                          color: Colors.purple.withOpacity(0.2)),
                     ),
                     child: Text(
                       '🧠 ${question.knowledgePoint!}',
@@ -534,10 +534,10 @@ class _MathPracticePageState extends State<MathPracticePage>
                     width: double.infinity,
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: Colors.blue.withValues(alpha: 0.06),
+                      color: Colors.blue.withOpacity(0.06),
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(
-                          color: Colors.blue.withValues(alpha: 0.2)),
+                          color: Colors.blue.withOpacity(0.2)),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -589,7 +589,7 @@ class _MathPracticePageState extends State<MathPracticePage>
                   margin: const EdgeInsets.only(top: 8),
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: Colors.grey.withValues(alpha: 0.08),
+                    color: Colors.grey.withOpacity(0.08),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Row(

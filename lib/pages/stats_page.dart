@@ -88,7 +88,7 @@ class _StatsPageState extends State<StatsPage> {
           gradient: LinearGradient(
             colors: [
               theme.colorScheme.primary,
-              theme.colorScheme.primary.withValues(alpha: 0.8),
+              theme.colorScheme.primary.withOpacity(0.8),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -244,7 +244,7 @@ class _StatsPageState extends State<StatsPage> {
                 color: checked
                     ? const Color(0xFF4CAF50)
                     : (isToday
-                        ? Colors.orange.withValues(alpha: 0.3)
+                        ? Colors.orange.withOpacity(0.3)
                         : Colors.grey[200]),
                 borderRadius: BorderRadius.circular(6),
                 border: isToday && !checked

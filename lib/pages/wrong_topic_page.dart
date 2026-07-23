@@ -13,7 +13,7 @@ class WrongTopicPage extends StatefulWidget {
 class _WrongTopicPageState extends State<WrongTopicPage> {
   List<WrongTopic> _topics = [];
   bool _isLoading = true;
-  String _filter = 'all'; // 'all', 'word', 'math'
+  String _filter = 'all'; // 'all', 'word', 'grammar', 'cloze', 'math'
 
   @override
   void initState() {
@@ -93,7 +93,17 @@ class _WrongTopicPageState extends State<WrongTopicPage> {
                       const SizedBox(width: 8),
                       _buildFilterChip(
                         'word',
-                        '英语 (${_topics.where((t) => t.type == 'word').length})',
+                        '单词 (${_topics.where((t) => t.type == 'word').length})',
+                      ),
+                      const SizedBox(width: 8),
+                      _buildFilterChip(
+                        'grammar',
+                        '语法 (${_topics.where((t) => t.type == 'grammar').length})',
+                      ),
+                      const SizedBox(width: 8),
+                      _buildFilterChip(
+                        'cloze',
+                        '完形 (${_topics.where((t) => t.type == 'cloze').length})',
                       ),
                       const SizedBox(width: 8),
                       _buildFilterChip(
@@ -160,12 +170,31 @@ class _WrongTopicPageState extends State<WrongTopicPage> {
   }
 
   Widget _buildTopicCard(WrongTopic topic) {
-    final typeIcon = topic.type == 'word'
-        ? Icons.menu_book
-        : Icons.calculate;
-    final typeColor =
-        topic.type == 'word' ? const Color(0xFF5C9CE6) : const Color(0xFFE6A845);
-    final typeLabel = topic.type == 'word' ? '英语' : '数学';
+    IconData typeIcon;
+    Color typeColor;
+    String typeLabel;
+
+    switch (topic.type) {
+      case 'word':
+        typeIcon = Icons.menu_book;
+        typeColor = const Color(0xFF5C9CE6);
+        typeLabel = '单词';
+        break;
+      case 'grammar':
+        typeIcon = Icons.text_snippet;
+        typeColor = const Color(0xFF7C4DFF);
+        typeLabel = '语法';
+        break;
+      case 'cloze':
+        typeIcon = Icons.article;
+        typeColor = const Color(0xFF9C27B0);
+        typeLabel = '完形';
+        break;
+      default: // 'math'
+        typeIcon = Icons.calculate;
+        typeColor = const Color(0xFFE6A845);
+        typeLabel = '数学';
+    }
 
     return Card(
       margin: const EdgeInsets.only(bottom: 10),
@@ -181,7 +210,7 @@ class _WrongTopicPageState extends State<WrongTopicPage> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   decoration: BoxDecoration(
-                    color: typeColor.withValues(alpha: 0.1),
+                    color: typeColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(4),
                   ),
                   child: Text(

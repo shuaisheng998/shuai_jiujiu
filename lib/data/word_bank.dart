@@ -495,16 +495,18 @@ class WordBank {
       {'e': 'purpose', 'c': '目的', 'p': '/ˈpɜːpəs/', 'd': 'on purpose 故意地'},
     ];
 
-    return data.map((e) => Word(
-      english: e['e']!,
-      chinese: e['c']!,
-      pronunciation: e['p'],
-      detailExplanation: e['d'],
-      level: 'junior',
-    )).toList();
-  }
+	    return data.map((e) => Word(
+	      english: e['e']!,
+	      chinese: e['c']!,
+	      pronunciation: e['p'],
+	      example: e['ex'],
+	      exampleChinese: e['ex_cn'],
+	      detailExplanation: e['d'],
+	      level: 'junior',
+	    )).toList();
+	  }
 
-  static List<Word> getSeniorWords() {
+	  static List<Word> getSeniorWords() {
     final data = <Map<String, String>>[
       // === 高中核心词汇 200个 ===
       {'e': 'abandon', 'c': '放弃；遗弃', 'p': '/əˈbændən/', 'd': 'abandon a plan 放弃计划，abandon hope 放弃希望'},
@@ -979,13 +981,15 @@ class WordBank {
       {'e': 'workforce', 'c': '劳动力', 'p': '/ˈwɜːkfɔːs/', 'd': 'skilled workforce 熟练劳动力'},
     ];
 
-    return data.map((e) => Word(
-      english: e['e']!,
-      chinese: e['c']!,
-      pronunciation: e['p'],
-      detailExplanation: e['d'],
-      level: 'senior',
-    )).toList();
+	    return data.map((e) => Word(
+	      english: e['e']!,
+	      chinese: e['c']!,
+	      pronunciation: e['p'],
+	      example: e['ex'],
+	      exampleChinese: e['ex_cn'],
+	      detailExplanation: e['d'],
+	      level: 'senior',
+	    )).toList();
   }
 
   static List<Word> getAllWords() {

@@ -31,6 +31,10 @@ class _ClozePageState extends State<ClozePage> {
   }
 
   void _switchLevel(String level) {
+    final filtered = ClozeBank.getAllTests()
+        .where((t) => t.level == level)
+        .toList();
+    if (filtered.isEmpty) return; // 无题目时不切换
     setState(() {
       _selectedLevel = level;
       _currentTestIndex = 0;
@@ -40,9 +44,7 @@ class _ClozePageState extends State<ClozePage> {
       _correctCount = 0;
       _totalDone = 0;
       _showTranslation = false;
-      _tests = ClozeBank.getAllTests()
-          .where((t) => t.level == level)
-          .toList();
+      _tests = filtered;
     });
   }
 
@@ -68,7 +70,7 @@ class _ClozePageState extends State<ClozePage> {
     if (!correct) {
       final topic = WrongTopic(
         id: DateTime.now().millisecondsSinceEpoch.toString(),
-        type: 'word',
+        type: 'cloze',
         content:
             '完形填空: ${_currentTest.title} - 第${_currentBlank.index + 1}空',
         correctAnswer: _currentBlank.options[_currentBlank.correctIndex],
@@ -234,9 +236,9 @@ class _ClozePageState extends State<ClozePage> {
               margin: const EdgeInsets.fromLTRB(12, 8, 12, 0),
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Colors.blue.withValues(alpha: 0.06),
+                color: Colors.blue.withOpacity(0.06),
                 borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: Colors.blue.withValues(alpha: 0.2)),
+                border: Border.all(color: Colors.blue.withOpacity(0.2)),
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -344,17 +346,17 @@ class _ClozePageState extends State<ClozePage> {
         Color? bgColor;
         if (isAnswered) {
           bgColor = _isCorrect == true
-              ? Colors.green.withValues(alpha: 0.2)
-              : Colors.red.withValues(alpha: 0.2);
+              ? Colors.green.withOpacity(0.2)
+              : Colors.red.withOpacity(0.2);
         } else if (!isCurrent && i < _currentBlankIndex) {
-          bgColor = Colors.green.withValues(alpha: 0.15);
+          bgColor = Colors.green.withOpacity(0.15);
         }
 
         children.add(WidgetSpan(
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
             decoration: BoxDecoration(
-              color: bgColor ?? (isCurrent ? Colors.yellow.withValues(alpha: 0.3) : Colors.grey[200]),
+              color: bgColor ?? (isCurrent ? Colors.yellow.withOpacity(0.3) : Colors.grey[200]),
               borderRadius: BorderRadius.circular(4),
               border: isCurrent && !isAnswered
                   ? Border.all(color: Colors.orange, width: 1.5)
@@ -395,9 +397,9 @@ class _ClozePageState extends State<ClozePage> {
             width: double.infinity,
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: Colors.blue.withValues(alpha: 0.06),
+              color: Colors.blue.withOpacity(0.06),
               borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Colors.blue.withValues(alpha: 0.2)),
+              border: Border.all(color: Colors.blue.withOpacity(0.2)),
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -445,11 +447,11 @@ class _ClozePageState extends State<ClozePage> {
 
             if (_selectedAnswer != null) {
               if (index == blank.correctIndex) {
-                bgColor = Colors.green.withValues(alpha: 0.12);
+                bgColor = Colors.green.withOpacity(0.12);
                 borderColor = Colors.green;
               } else if (index == _selectedAnswer &&
                   _selectedAnswer != blank.correctIndex) {
-                bgColor = Colors.red.withValues(alpha: 0.12);
+                bgColor = Colors.red.withOpacity(0.12);
                 borderColor = Colors.red;
               }
             }

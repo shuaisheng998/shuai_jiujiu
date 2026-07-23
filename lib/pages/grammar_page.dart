@@ -79,7 +79,7 @@ class _GrammarPageState extends State<GrammarPage> {
       final q = _questions[_currentIndex];
       final topic = WrongTopic(
         id: DateTime.now().millisecondsSinceEpoch.toString(),
-        type: 'word',
+        type: 'grammar',
         content: '语法: ${q.question}',
         correctAnswer: q.options[q.correctIndex],
         userAnswer: q.options[index],
@@ -239,7 +239,7 @@ class _GrammarPageState extends State<GrammarPage> {
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                               decoration: BoxDecoration(
-                                color: theme.colorScheme.primary.withValues(alpha: 0.1),
+                                color: theme.colorScheme.primary.withOpacity(0.1),
                                 borderRadius: BorderRadius.circular(4),
                               ),
                               child: Text(
@@ -277,13 +277,13 @@ class _GrammarPageState extends State<GrammarPage> {
                         padding: const EdgeInsets.all(14),
                         decoration: BoxDecoration(
                           color: _isCorrect == true
-                              ? Colors.green.withValues(alpha: 0.08)
-                              : Colors.blue.withValues(alpha: 0.08),
+                              ? Colors.green.withOpacity(0.08)
+                              : Colors.blue.withOpacity(0.08),
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
                             color: _isCorrect == true
-                                ? Colors.green.withValues(alpha: 0.3)
-                                : Colors.blue.withValues(alpha: 0.3),
+                                ? Colors.green.withOpacity(0.3)
+                                : Colors.blue.withOpacity(0.3),
                           ),
                         ),
                         child: Row(
@@ -341,10 +341,10 @@ class _GrammarPageState extends State<GrammarPage> {
 
     if (_selectedAnswer != null) {
       if (index == q.correctIndex) {
-        bgColor = Colors.green.withValues(alpha: 0.12);
+        bgColor = Colors.green.withOpacity(0.12);
         borderColor = Colors.green;
       } else if (index == _selectedAnswer && _selectedAnswer != q.correctIndex) {
-        bgColor = Colors.red.withValues(alpha: 0.12);
+        bgColor = Colors.red.withOpacity(0.12);
         borderColor = Colors.red;
       }
     }
