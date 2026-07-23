@@ -307,6 +307,83 @@ Don't put ___ tomorrow what can be done today.''',
           ),
         ],
       ),
+      // ===== 追加：初中 =====
+      ClozeTest(
+        id: 'junior_4',
+        title: '帮助他人',
+        level: 'junior',
+        translation: '玛丽是个善良的女孩。她总是帮助别人。上周她在路上发现了一个钱包。她把钱包交给了警察。警察找到了失主。失主非常感激。玛丽非常开心。',
+        passage: '''Mary is a ___ girl.
+She always ___ others.
+Last week, she found a wallet ___ the street.
+She gave ___ to the police.
+The police found the ___.
+The owner was very ___.
+Mary was very happy.''',
+        blanks: [
+          ClozeBlank(index: 0, options: ['kind', 'kindly', 'kinder', 'kindness'], correctIndex: 0, explanation: '修饰名词girl用形容词kind，意思是"善良的"。'),
+          ClozeBlank(index: 1, options: ['help', 'helps', 'helped', 'helping'], correctIndex: 1, explanation: 'She是第三人称单数，一般现在时加-s。'),
+          ClozeBlank(index: 2, options: ['in', 'on', 'at', 'under'], correctIndex: 1, explanation: '"在路上"用on the street。'),
+          ClozeBlank(index: 3, options: ['it', 'them', 'her', 'him'], correctIndex: 0, explanation: '指代前面的a wallet（钱包），单数用it。'),
+          ClozeBlank(index: 4, options: ['owner', 'wallet', 'police', 'girl'], correctIndex: 0, explanation: '警察找到了失主，owner是"失主/主人"。'),
+          ClozeBlank(index: 5, options: ['thankful', 'thank', 'thanking', 'thanks'], correctIndex: 0, explanation: 'was后面接形容词thankful，表示"感激的"。'),
+        ],
+      ),
+      ClozeTest(
+        id: 'junior_5',
+        title: '健康饮食',
+        level: 'junior',
+        translation: '健康饮食对我们很重要。我们应该每天吃水果和蔬菜。不要吃太多垃圾食品。多喝水。多做运动。这样你就能保持健康。',
+        passage: '''A healthy diet is very ___ for us.
+We should eat ___ and vegetables every day.
+Don't eat too much ___ food.
+Drink ___ water.
+Take more ___.
+In this way, you can ___ healthy.''',
+        blanks: [
+          ClozeBlank(index: 0, options: ['important', 'easy', 'difficult', 'good'], correctIndex: 0, explanation: 'be important for 是"对...重要"的固定搭配。'),
+          ClozeBlank(index: 1, options: ['fruit', 'fruit\'s', 'fruits', 'fruity'], correctIndex: 0, explanation: 'fruit作为"水果"总称时是不可数名词，和vegetables并列。'),
+          ClozeBlank(index: 2, options: ['junk', 'healthy', 'good', 'nice'], correctIndex: 0, explanation: 'junk food 是"垃圾食品"的固定说法。'),
+          ClozeBlank(index: 3, options: ['much', 'many', 'a lot', 'some'], correctIndex: 0, explanation: 'water不可数，用much修饰。Drink much water 多喝水。'),
+          ClozeBlank(index: 4, options: ['exercise', 'exercises', 'exercising', 'exercised'], correctIndex: 0, explanation: 'take exercise 是"做运动"的固定搭配，exercise不可数。'),
+          ClozeBlank(index: 5, options: ['stay', 'stays', 'staying', 'stayed'], correctIndex: 0, explanation: 'can后面接动词原形。stay healthy 保持健康。'),
+        ],
+      ),
+      // ===== 追加：高中 =====
+      ClozeTest(
+        id: 'senior_4',
+        title: '科技改变生活',
+        level: 'senior',
+        translation: '科技在我们的生活中扮演着重要的角色。智能手机改变了我们的交流方式。互联网让我们足不出户就能获取信息。但我们也需要明智地使用科技。',
+        passage: '''Technology plays an ___ role in our lives.
+Smartphones have changed the way we ___.
+The Internet makes it possible for us to get ___ without leaving home.
+But we also need to use technology ___.''',
+        blanks: [
+          ClozeBlank(index: 0, options: ['important', 'importantly', 'importance', 'more important'], correctIndex: 0, explanation: 'play an important role 是固定搭配，意思是"扮演重要角色"。an后面要用元音音素开头的词。'),
+          ClozeBlank(index: 1, options: ['communicate', 'communication', 'communicative', 'communicating'], correctIndex: 0, explanation: 'we后面接动词原形，communicate是动词"交流"。'),
+          ClozeBlank(index: 2, options: ['information', 'informations', 'informative', 'inform'], correctIndex: 0, explanation: 'information是不可数名词，没有复数形式。'),
+          ClozeBlank(index: 3, options: ['wisely', 'wise', 'wisdom', 'wiser'], correctIndex: 0, explanation: '修饰动词use要用副词，wisely是"明智地"。'),
+        ],
+      ),
+      ClozeTest(
+        id: 'senior_5',
+        title: '成功的秘诀',
+        level: 'senior',
+        translation: '成功没有捷径。努力工作是关键。设定明确的目标，然后一步一步地实现它们。不要害怕失败。从错误中学习，继续前进。',
+        passage: '''There is no ___ way to success.
+___ work is the key to success.
+Set clear ___ and achieve them step by step.
+Don't be afraid of ___.
+Learn from your mistakes and move ___.''',
+        blanks: [
+          ClozeBlank(index: 0, options: ['easy', 'easily', 'easier', 'easiest'], correctIndex: 0, explanation: '修饰名词way用形容词。No easy way 没有容易的路。'),
+          ClozeBlank(index: 1, options: ['Hard', 'Hardly', 'Harder', 'Hardest'], correctIndex: 0, explanation: 'Hard work 是"努力工作"的意思。Hardly是"几乎不"，意思完全不同。'),
+          ClozeBlank(index: 2, options: ['goals', 'goal', 'goaling', 'goaled'], correctIndex: 0, explanation: 'set goals 设定目标。前面有"clear"修饰，且不止一个目标，用复数。'),
+          ClozeBlank(index: 3, options: ['failure', 'fail', 'failing', 'failed'], correctIndex: 0, explanation: 'be afraid of后面接名词，failure是"失败"的名词形式。'),
+          ClozeBlank(index: 4, options: ['on', 'in', 'out', 'up'], correctIndex: 0, explanation: 'move on 是固定短语，意思是"继续前进"。'),
+        ],
+      ),
     ];
   }
 }
