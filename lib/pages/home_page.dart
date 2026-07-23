@@ -3,6 +3,7 @@ import '../services/storage_service.dart';
 import 'word_study_page.dart';
 import 'math_practice_page.dart';
 import 'cloze_page.dart';
+import 'grammar_page.dart';
 import 'wrong_topic_page.dart';
 import 'stats_page.dart';
 
@@ -19,6 +20,7 @@ class _HomePageState extends State<HomePage> {
   int _totalDays = 0;
   int _wordsLearned = 0;
   int _questionsDone = 0;
+  int _wrongCount = 0;
 
   @override
   void initState() {
@@ -32,12 +34,14 @@ class _HomePageState extends State<HomePage> {
     final totalDays = await StorageService.getTotalCheckInDays();
     final wordsLearned = await StorageService.getTotalWordsLearned();
     final questionsDone = await StorageService.getTotalQuestionsDone();
+    final wrongTopics = await StorageService.getWrongTopics();
     setState(() {
       _checkedInToday = checkedIn;
       _streak = streak;
       _totalDays = totalDays;
       _wordsLearned = wordsLearned;
       _questionsDone = questionsDone;
+      _wrongCount = wrongTopics.length;
     });
   }
 
@@ -78,6 +82,10 @@ class _HomePageState extends State<HomePage> {
           _buildCheckInCard(theme),
           const SizedBox(height: 12),
 
+          // ===== 每日学习建议 =====
+          _buildDailySuggestion(theme),
+          const SizedBox(height: 12),
+
           // ===== 学习统计数据 =====
           _buildStatsRow(theme),
           const SizedBox(height: 16),
@@ -91,6 +99,16 @@ class _HomePageState extends State<HomePage> {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) => const WordStudyPage()),
+            ),
+          ),
+          _buildMenuItem(
+            icon: Icons.text_snippet_rounded,
+            title: '英语语法',
+            subtitle: '时态 · be动词 · 句式 · 介词',
+            color: const Color(0xFF7C4DFF),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const GrammarPage()),
             ),
           ),
           _buildMenuItem(
@@ -221,6 +239,59 @@ class _HomePageState extends State<HomePage> {
               ],
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDailySuggestion(ThemeData theme) {
+    String suggestion;
+    IconData icon;
+    Color color;
+
+    if (_streak == 0 && _totalDays == 0) {
+      suggestion = '🌟 开始你的学习之旅吧！先背10个单词试试';
+      icon = Icons.lightbulb_outline;
+      color = Colors.amber;
+    } else if (_wrongCount > 0) {
+      suggestion = '📚 你有 $_wrongCount 道错题，建议先去错题本复习一遍';
+      icon = Icons.replay;
+      color = Colors.orange;
+    } else if (_wordsLearned < 20) {
+      suggestion = '📖 建议今天学10个新单词，积少成多！';
+      icon = Icons.menu_book;
+      color = theme.colorScheme.primary;
+    } else if (_streak > 0 && _streak % 7 == 0) {
+      suggestion = '🎉 连续打卡 $_streak 天啦！奖励一下自己吧！';
+      icon = Icons.celebration;
+      color = Colors.amber;
+    } else {
+      suggestion = '💪 今天也来打卡学习吧！每天进步一点点！';
+      icon = Icons.trending_up;
+      color = Colors.green;
+    }
+
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Row(
+          children: [
+            Container(
+              width: 36, height: 36,
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Icon(icon, color: color, size: 22),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                suggestion,
+                style: const TextStyle(fontSize: 14, height: 1.4),
+              ),
+            ),
+          ],
         ),
       ),
     );
