@@ -37,11 +37,30 @@ jobs:
         run: flutter analyze --no-fatal-warnings --no-fatal-infos 2>&1 | tee /tmp/analyze.log
         continue-on-error: true
 
-      - name: Build APK with verbose
-        run: flutter build apk --debug --verbose 2>&1 | tail -50
+      - name: Build APK
+        run: |
+          set -o pipefail
+          flutter build apk --debug 2>&1 | tee /tmp/build.log
+
+      - name: Verify APK exists
+        run: |
+          ls -la build/app/outputs/flutter-apk/
+          if [ ! -f build/app/outputs/flutter-apk/app-debug.apk ]; then
+            echo "ERROR: APK not found!"
+            exit 1
+          fi
+          echo "APK found, size: $(ls -lh build/app/outputs/flutter-apk/app-debug.apk | awk '{print $5}')"
+
+      - name: Upload Build Log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: /tmp/build.log
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: shuai-jiujiu
           path: build/app/outputs/flutter-apk/app-debug.apk
+          if-no-files-found: error
