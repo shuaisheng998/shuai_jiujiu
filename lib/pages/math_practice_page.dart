@@ -46,9 +46,10 @@ class _MathPracticePageState extends State<MathPracticePage>
       _showExplanation = false;
       _correctCount = 0;
       _totalCount = 0;
-      _questions = level == 'junior'
-          ? MathBank.getJuniorQuestions()..shuffle(Random())
-          : MathBank.getSeniorQuestions()..shuffle(Random());
+      final source = level == 'junior'
+          ? MathBank.getJuniorQuestions()
+          : MathBank.getSeniorQuestions();
+      _questions = source..shuffle(Random());
     });
   }
 

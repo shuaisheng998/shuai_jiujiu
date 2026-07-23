@@ -47,9 +47,10 @@ class _WordStudyPageState extends State<WordStudyPage>
       _currentIndex = 0;
       _showChinese = false;
       _isQuizMode = false;
-      _words = level == 'junior'
-          ? WordBank.getJuniorWords()..shuffle(Random())
-          : WordBank.getSeniorWords()..shuffle(Random());
+      final source = level == 'junior'
+          ? WordBank.getJuniorWords()
+          : WordBank.getSeniorWords();
+      _words = source..shuffle(Random());
     });
   }
 
