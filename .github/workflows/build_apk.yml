@@ -37,29 +37,8 @@ jobs:
         run: flutter analyze --no-fatal-warnings --no-fatal-infos 2>&1 | tee /tmp/analyze.log
         continue-on-error: true
 
-      - name: Build APK
-        run: flutter build apk --debug 2>&1 | tee /tmp/error.log; exit ${PIPESTATUS[0]}
-
-      - name: Show error summary
-        if: failure()
-        run: |
-          echo "=== BUILD ERROR ==="
-          tail -100 /tmp/error.log
-          echo "=== END OF ERROR ==="
-
-      - name: Upload error log
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: error-log
-          path: /tmp/error.log
-
-      - name: Upload analyze log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: analyze-log
-          path: /tmp/analyze.log
+      - name: Build APK with verbose
+        run: flutter build apk --debug --verbose 2>&1 | head -200
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
