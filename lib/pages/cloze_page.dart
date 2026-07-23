@@ -110,9 +110,9 @@ class _ClozePageState extends State<ClozePage> {
             ),
             const SizedBox(height: 8),
             Text(
-              _correctCount / _totalDone >= 0.8
+              _totalDone > 0 && _correctCount / _totalDone >= 0.8
                   ? '太棒了！继续加油！🌟'
-                  : _correctCount / _totalDone >= 0.6
+                  : _totalDone > 0 && _correctCount / _totalDone >= 0.6
                       ? '不错，再练练会更好！💪'
                       : '错题已收录，记得复习！📚',
               style: const TextStyle(fontSize: 16, color: Colors.grey),

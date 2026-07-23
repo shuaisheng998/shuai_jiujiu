@@ -1,11 +1,10 @@
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../models/study_record.dart';
+
 import '../models/wrong_topic.dart';
 
 class StorageService {
   static const _checkInKey = 'check_in_dates';
-  static const _wordProgressKey = 'word_progress';
   static const _wrongTopicsKey = 'wrong_topics';
 
   // ===== 打卡功能 =====

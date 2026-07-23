@@ -143,9 +143,9 @@ class _WordStudyPageState extends State<WordStudyPage>
             ),
             const SizedBox(height: 8),
             Text(
-              _correctCount / _totalCount >= 0.8
+              _totalCount > 0 && _correctCount / _totalCount >= 0.8
                   ? '太棒了！继续加油！🌟'
-                  : _correctCount / _totalCount >= 0.6
+                  : _totalCount > 0 && _correctCount / _totalCount >= 0.6
                       ? '不错，再练练会更好！💪'
                       : '别灰心，多复习几次就好了！📚',
               style: const TextStyle(fontSize: 16, color: Colors.grey),

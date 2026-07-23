@@ -136,9 +136,9 @@ class _GrammarPageState extends State<GrammarPage> {
             ),
             const SizedBox(height: 8),
             Text(
-              _correctCount / _totalCount >= 0.8
+              _totalCount > 0 && _correctCount / _totalCount >= 0.8
                   ? '太棒了！🌟'
-                  : _correctCount / _totalCount >= 0.6
+                  : _totalCount > 0 && _correctCount / _totalCount >= 0.6
                       ? '继续加油！💪'
                       : '错题已收录，记得复习！📚',
               style: const TextStyle(fontSize: 14, color: Colors.grey),

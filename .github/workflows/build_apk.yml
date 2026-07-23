@@ -40,6 +40,13 @@ jobs:
       - name: Build APK
         run: flutter build apk --debug 2>&1 | tee /tmp/error.log; exit ${PIPESTATUS[0]}
 
+      - name: Show error summary
+        if: failure()
+        run: |
+          echo "=== BUILD ERROR ==="
+          tail -100 /tmp/error.log
+          echo "=== END OF ERROR ==="
+
       - name: Upload error log
         if: failure()
         uses: actions/upload-artifact@v4
