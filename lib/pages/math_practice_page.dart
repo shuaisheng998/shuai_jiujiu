@@ -65,7 +65,7 @@ class _MathPracticePageState extends State<MathPracticePage>
     });
   }
 
-  void _answerQuestion(int index) {
+  Future<void> _answerQuestion(int index) async {
     if (_selectedAnswer != null) return;
 
     final correct = index == _questions[_currentIndex].correctIndex;
@@ -88,10 +88,10 @@ class _MathPracticePageState extends State<MathPracticePage>
         userAnswer: q.options[index],
         wrongDate: DateTime.now(),
       );
-      StorageService.addWrongTopic(topic);
+      await StorageService.addWrongTopic(topic);
     }
 
-    StorageService.incrementQuestionsDone();
+    await StorageService.incrementQuestionsDone();
   }
 
   void _nextQuestion() {

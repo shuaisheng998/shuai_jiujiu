@@ -29,12 +29,14 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> _loadData() async {
+    if (!mounted) return;
     final checkedIn = await StorageService.hasCheckedInToday();
     final streak = await StorageService.getCheckInStreak();
     final totalDays = await StorageService.getTotalCheckInDays();
     final wordsLearned = await StorageService.getTotalWordsLearned();
     final questionsDone = await StorageService.getTotalQuestionsDone();
     final wrongTopics = await StorageService.getWrongTopics();
+    if (!mounted) return;
     setState(() {
       _checkedInToday = checkedIn;
       _streak = streak;
@@ -48,7 +50,7 @@ class _HomePageState extends State<HomePage> {
   Future<void> _doCheckIn() async {
     final success = await StorageService.checkInToday();
     if (success) {
-      _loadData();
+      await _loadData();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(

@@ -22,6 +22,7 @@ class _WrongTopicPageState extends State<WrongTopicPage> {
 
   Future<void> _loadTopics() async {
     final topics = await StorageService.getWrongTopics();
+    if (!mounted) return;
     setState(() {
       _topics = topics;
       _isLoading = false;
@@ -35,7 +36,7 @@ class _WrongTopicPageState extends State<WrongTopicPage> {
 
   Future<void> _removeTopic(String id) async {
     await StorageService.removeWrongTopic(id);
-    _loadTopics();
+    await _loadTopics();
   }
 
   Future<void> _clearAll() async {
@@ -59,7 +60,7 @@ class _WrongTopicPageState extends State<WrongTopicPage> {
 
     if (confirmed == true) {
       await StorageService.clearWrongTopics();
-      _loadTopics();
+      await _loadTopics();
     }
   }
 
@@ -239,12 +240,15 @@ class _WrongTopicPageState extends State<WrongTopicPage> {
               children: [
                 const Text('你的答案: ',
                     style: TextStyle(fontSize: 13, color: Colors.red)),
-                Text(
-                  topic.userAnswer,
-                  style: const TextStyle(
-                    fontSize: 13,
-                    color: Colors.red,
-                    decoration: TextDecoration.lineThrough,
+                Expanded(
+                  child: Text(
+                    topic.userAnswer,
+                    style: const TextStyle(
+                      fontSize: 13,
+                      color: Colors.red,
+                      decoration: TextDecoration.lineThrough,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ],
@@ -253,12 +257,15 @@ class _WrongTopicPageState extends State<WrongTopicPage> {
               children: [
                 const Text('正确答案: ',
                     style: TextStyle(fontSize: 13, color: Colors.green)),
-                Text(
-                  topic.correctAnswer,
-                  style: const TextStyle(
-                    fontSize: 13,
-                    color: Colors.green,
-                    fontWeight: FontWeight.bold,
+                Expanded(
+                  child: Text(
+                    topic.correctAnswer,
+                    style: const TextStyle(
+                      fontSize: 13,
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ],

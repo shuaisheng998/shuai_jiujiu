@@ -89,7 +89,7 @@ class _WordStudyPageState extends State<WordStudyPage>
     _quizOptions.shuffle(Random());
   }
 
-  void _answerQuestion(int index) {
+  Future<void> _answerQuestion(int index) async {
     if (_selectedAnswer != null) return;
 
     final correct = _quizOptions[index] == _words[_currentIndex].chinese;
@@ -110,7 +110,7 @@ class _WordStudyPageState extends State<WordStudyPage>
         userAnswer: _quizOptions[index],
         wrongDate: DateTime.now(),
       );
-      StorageService.addWrongTopic(topic);
+      await StorageService.addWrongTopic(topic);
     }
   }
 
@@ -406,6 +406,7 @@ class _WordStudyPageState extends State<WordStudyPage>
                 child: ElevatedButton.icon(
                   onPressed: () async {
                     await StorageService.markWordLearned(word.english);
+                    if (!mounted) return;
                     if (_currentIndex < _words.length - 1) {
                       setState(() {
                         _currentIndex++;

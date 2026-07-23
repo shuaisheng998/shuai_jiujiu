@@ -24,12 +24,13 @@ class _StatsPageState extends State<StatsPage> {
   }
 
   Future<void> _loadStats() async {
+    if (!mounted) return;
     final totalDays = await StorageService.getTotalCheckInDays();
     final streak = await StorageService.getCheckInStreak();
     final wordsLearned = await StorageService.getTotalWordsLearned();
     final questionsDone = await StorageService.getTotalQuestionsDone();
     final wrongTopics = await StorageService.getWrongTopics();
-
+    if (!mounted) return;
     setState(() {
       _totalDays = totalDays;
       _streak = streak;

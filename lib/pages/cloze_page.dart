@@ -56,7 +56,7 @@ class _ClozePageState extends State<ClozePage> {
 
   int get _totalBlanks => _currentTest.blanks.length;
 
-  void _answerQuestion(int index) {
+  Future<void> _answerQuestion(int index) async {
     if (_selectedAnswer != null) return;
 
     final correct = index == _currentBlank.correctIndex;
@@ -77,7 +77,7 @@ class _ClozePageState extends State<ClozePage> {
         userAnswer: _currentBlank.options[index],
         wrongDate: DateTime.now(),
       );
-      StorageService.addWrongTopic(topic);
+      await StorageService.addWrongTopic(topic);
     }
   }
 
@@ -211,7 +211,7 @@ class _ClozePageState extends State<ClozePage> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(4),
                     child: LinearProgressIndicator(
-                      value: (_currentBlankIndex + 1) / _totalBlanks,
+                      value: _totalBlanks > 0 ? (_currentBlankIndex + 1) / _totalBlanks : 0,
                       minHeight: 6,
                       backgroundColor: Colors.grey[200],
                     ),
@@ -263,12 +263,15 @@ class _ClozePageState extends State<ClozePage> {
                 Icon(Icons.article_outlined,
                     size: 18, color: theme.colorScheme.primary),
                 const SizedBox(width: 6),
-                Text(
-                  _currentTest.title,
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: theme.colorScheme.primary,
+                Expanded(
+                  child: Text(
+                    _currentTest.title,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: theme.colorScheme.primary,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ],

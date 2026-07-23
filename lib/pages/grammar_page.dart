@@ -64,7 +64,7 @@ class _GrammarPageState extends State<GrammarPage> {
     });
   }
 
-  void _answerQuestion(int index) {
+  Future<void> _answerQuestion(int index) async {
     if (_selectedAnswer != null) return;
 
     final correct = index == _questions[_currentIndex].correctIndex;
@@ -85,10 +85,10 @@ class _GrammarPageState extends State<GrammarPage> {
         userAnswer: q.options[index],
         wrongDate: DateTime.now(),
       );
-      StorageService.addWrongTopic(topic);
+      await StorageService.addWrongTopic(topic);
     }
 
-    StorageService.incrementQuestionsDone();
+    await StorageService.incrementQuestionsDone();
   }
 
   void _nextQuestion() {
@@ -207,13 +207,13 @@ class _GrammarPageState extends State<GrammarPage> {
             child: Row(
               children: [
                 Text(
-                  '${_currentIndex + 1} / ${_questions.length}',
+                  '${_questions.isEmpty ? 0 : _currentIndex + 1} / ${_questions.length}',
                   style: const TextStyle(fontSize: 13, color: Colors.grey),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
                   child: LinearProgressIndicator(
-                    value: (_currentIndex + 1) / _questions.length,
+                    value: _questions.isEmpty ? 0 : (_currentIndex + 1) / _questions.length,
                     minHeight: 6,
                     borderRadius: BorderRadius.circular(4),
                     backgroundColor: Colors.grey[200],
