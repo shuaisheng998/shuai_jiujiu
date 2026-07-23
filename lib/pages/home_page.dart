@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../services/storage_service.dart';
 import 'word_study_page.dart';
 import 'math_practice_page.dart';
+import 'cloze_page.dart';
 import 'wrong_topic_page.dart';
 import 'stats_page.dart';
 
@@ -90,6 +91,16 @@ class _HomePageState extends State<HomePage> {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) => const WordStudyPage()),
+            ),
+          ),
+          _buildMenuItem(
+            icon: Icons.article_rounded,
+            title: '完形填空',
+            subtitle: '短文理解 · 上下文推理',
+            color: const Color(0xFF9C27B0),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ClozePage()),
             ),
           ),
           _buildMenuItem(
