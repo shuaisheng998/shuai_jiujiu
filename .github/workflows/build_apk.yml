@@ -26,7 +26,7 @@ jobs:
           cache: true
 
       - name: Accept Android Licenses
-        run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+        run: flutter doctor --android-licenses || true
 
       - name: Install dependencies
         run: |
