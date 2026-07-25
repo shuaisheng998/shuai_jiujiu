@@ -4,8 +4,47 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- 简单书形图标 -->
+
+    <!-- 卡比身体（粉色大圆） -->
+    <path
+        android:fillColor="#FF91A4"
+        android:pathData="M54,84 C70.5,84 84,70.5 84,54 C84,37.5 70.5,24 54,24 C37.5,24 24,37.5 24,54 C24,70.5 37.5,84 54,84 Z" />
+
+    <!-- 左眼 -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M36,48 C36,44 41,40 44,42 L44,52 C41,52 36,50 36,48 Z" />
+
+    <!-- 右眼 -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M64,42 C67,40 72,44 72,48 C72,50 67,52 64,52 Z" />
+
+    <!-- 左眼高光 -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M36,36h36v6h-36zM36,46h36v6h-36zM36,56h28v6h-28z"/>
+        android:pathData="M42,43 C42,42 43,41 44,42 L44,44 C43,44 42,43 42,43 Z" />
+
+    <!-- 右眼高光 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M68,42 C68,41 69,42 69,43 C69,44 68,44 68,43 Z" />
+
+    <!-- 嘴（弧形笑） -->
+    <path
+        android:fillColor="#C94F5B"
+        android:pathData="M46,60 C48,64 60,64 62,60 L62,62 C60,66 48,66 46,62 Z" />
+
+    <!-- 左脸颊红晕 -->
+    <path
+        android:fillColor="#FF6B81"
+        android:fillAlpha="0.35"
+        android:pathData="M32,55 C32,53 36,51 38,53 L38,57 C36,57 32,56 32,55 Z" />
+
+    <!-- 右脸颊红晕 -->
+    <path
+        android:fillColor="#FF6B81"
+        android:fillAlpha="0.35"
+        android:pathData="M70,53 C72,51 76,53 76,55 C76,56 72,57 70,57 Z" />
+
 </vector>
