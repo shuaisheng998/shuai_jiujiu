@@ -718,28 +718,36 @@ class GrammarBank {
   }
 
   static List<GrammarQuestion> getGrade8Questions() {
-    return getGrade7Questions().map((q) => GrammarQuestion(
+    return getGrade7Questions()
+        .where((q) => ['时态', '介词', '形容词'].contains(q.category))
+        .map((q) => GrammarQuestion(
       question: q.question, options: q.options, correctIndex: q.correctIndex,
       explanation: q.explanation, category: q.category,
       level: 'grade8', difficulty: q.difficulty,
     )).toList();
   }
   static List<GrammarQuestion> getGrade9Questions() {
-    return getGrade7Questions().map((q) => GrammarQuestion(
+    return getGrade7Questions()
+        .where((q) => ['语态', '情态动词', '句式'].contains(q.category))
+        .map((q) => GrammarQuestion(
       question: q.question, options: q.options, correctIndex: q.correctIndex,
       explanation: q.explanation, category: q.category,
       level: 'grade9', difficulty: q.difficulty,
     )).toList();
   }
   static List<GrammarQuestion> getGrade11Questions() {
-    return getGrade10Questions().map((q) => GrammarQuestion(
+    return getGrade10Questions()
+        .where((q) => ['从句', '语态'].contains(q.category))
+        .map((q) => GrammarQuestion(
       question: q.question, options: q.options, correctIndex: q.correctIndex,
       explanation: q.explanation, category: q.category,
       level: 'grade11', difficulty: q.difficulty,
     )).toList();
   }
   static List<GrammarQuestion> getGrade12Questions() {
-    return getGrade10Questions().map((q) => GrammarQuestion(
+    return getGrade10Questions()
+        .where((q) => ['时态', '句式', '情态动词', '非谓语'].contains(q.category))
+        .map((q) => GrammarQuestion(
       question: q.question, options: q.options, correctIndex: q.correctIndex,
       explanation: q.explanation, category: q.category,
       level: 'grade12', difficulty: q.difficulty,
