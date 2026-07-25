@@ -1032,9 +1032,6 @@ class WordBank {
     return [...getGrade7Words(), ...getGrade8Words(), ...getGrade9Words(),
             ...getGrade10Words(), ...getGrade11Words(), ...getGrade12Words()];
   }
-}
-
-  static List<Word> getAllWords() {
-    return [...getGrade7Words(), ...getGrade10Words()];
   }
 }
+
