@@ -1911,36 +1911,28 @@ class MathBank {
   }
 
   static List<MathQuestion> getGrade8Questions() {
-    return getGrade7Questions()
-        .where((q) => ['几何', '函数'].contains(q.category))
-        .map((q) => MathQuestion(
+    return getGrade7Questions().map((q) => MathQuestion(
       question: q.question, options: q.options, correctIndex: q.correctIndex,
       explanation: q.explanation, steps: q.steps, knowledgePoint: q.knowledgePoint,
       category: q.category, level: 'grade8', difficulty: q.difficulty,
     )).toList();
   }
   static List<MathQuestion> getGrade9Questions() {
-    return getGrade7Questions()
-        .where((q) => ['应用题', '统计', '代数'].contains(q.category))
-        .map((q) => MathQuestion(
+    return getGrade7Questions().map((q) => MathQuestion(
       question: q.question, options: q.options, correctIndex: q.correctIndex,
       explanation: q.explanation, steps: q.steps, knowledgePoint: q.knowledgePoint,
       category: q.category, level: 'grade9', difficulty: q.difficulty,
     )).toList();
   }
   static List<MathQuestion> getGrade11Questions() {
-    return getGrade10Questions()
-        .where((q) => ['向量', '代数', '解析几何', '三角函数'].contains(q.category))
-        .map((q) => MathQuestion(
+    return getGrade10Questions().map((q) => MathQuestion(
       question: q.question, options: q.options, correctIndex: q.correctIndex,
       explanation: q.explanation, steps: q.steps, knowledgePoint: q.knowledgePoint,
       category: q.category, level: 'grade11', difficulty: q.difficulty,
     )).toList();
   }
   static List<MathQuestion> getGrade12Questions() {
-    return getGrade10Questions()
-        .where((q) => ['概率', '导数', '统计', '数列'].contains(q.category))
-        .map((q) => MathQuestion(
+    return getGrade10Questions().map((q) => MathQuestion(
       question: q.question, options: q.options, correctIndex: q.correctIndex,
       explanation: q.explanation, steps: q.steps, knowledgePoint: q.knowledgePoint,
       category: q.category, level: 'grade12', difficulty: q.difficulty,
