@@ -131,34 +131,33 @@ class _WrongTopicPageState extends State<WrongTopicPage> {
     final topic = _practiceTopics[_practiceIndex];
     return Scaffold(
       appBar: AppBar(title: Text('错题练习 ${_practiceIndex + 1}/${_practiceTopics.length}'), backgroundColor: t.colorScheme.primary, foregroundColor: Colors.white),
-      body: Padding(padding: const EdgeInsets.all(20), child: Column(children: [
+      body: SingleChildScrollView(padding: const EdgeInsets.all(20), child: Column(children: [
         Row(children: [
           Expanded(child: Text('${_practiceIndex + 1} / ${_practiceTopics.length}', style: const TextStyle(fontSize: 14, color: Colors.grey))),
           Text('✅ $_practiceCorrect', style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.green)),
         ]),
         const SizedBox(height: 6),
         LinearProgressIndicator(value: (_practiceIndex + 1) / _practiceTopics.length, minHeight: 6, borderRadius: BorderRadius.circular(3)),
-        const SizedBox(height: 20),
-        Card(child: Container(width: double.infinity, padding: const EdgeInsets.all(20), child: Text(topic.content, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500, height: 1.6)))),
         const SizedBox(height: 16),
-        Container(width: double.infinity, padding: const EdgeInsets.all(14), decoration: BoxDecoration(color: Colors.red.shade50, borderRadius: BorderRadius.circular(10), border: Border.all(color: Colors.red.shade200)), child: Row(children: [
+        Card(child: Container(width: double.infinity, padding: const EdgeInsets.all(16), child: Text(topic.content, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w500, height: 1.6)))),
+        const SizedBox(height: 12),
+        Container(width: double.infinity, padding: const EdgeInsets.all(12), decoration: BoxDecoration(color: Colors.red.shade50, borderRadius: BorderRadius.circular(10), border: Border.all(color: Colors.red.shade200)), child: Row(children: [
           const Text('❌ 你的答案: ', style: TextStyle(fontSize: 14, color: Colors.red)),
           Expanded(child: Text(topic.userAnswer, style: const TextStyle(fontSize: 14, color: Colors.red, decoration: TextDecoration.lineThrough))),
         ])),
         const SizedBox(height: 8),
-        Container(width: double.infinity, padding: const EdgeInsets.all(14), decoration: BoxDecoration(color: Colors.green.shade50, borderRadius: BorderRadius.circular(10), border: Border.all(color: Colors.green.shade200)), child: Row(children: [
+        Container(width: double.infinity, padding: const EdgeInsets.all(12), decoration: BoxDecoration(color: Colors.green.shade50, borderRadius: BorderRadius.circular(10), border: Border.all(color: Colors.green.shade200)), child: Row(children: [
           const Text('✅ 正确答案: ', style: TextStyle(fontSize: 14, color: Colors.green)),
           Expanded(child: Text(topic.correctAnswer, style: const TextStyle(fontSize: 14, color: Colors.green, fontWeight: FontWeight.bold))),
         ])),
-        const Spacer(),
+        const SizedBox(height: 20),
         const Text('现在你理解了吗？', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
-        const SizedBox(height: 16),
+        const SizedBox(height: 14),
         Row(children: [
           Expanded(child: ElevatedButton.icon(onPressed: () => _answerPractice(true), icon: const Icon(Icons.check), label: const Text('我懂了'), style: ElevatedButton.styleFrom(backgroundColor: Colors.green, foregroundColor: Colors.white, padding: const EdgeInsets.symmetric(vertical: 14)))),
-          const SizedBox(width: 16),
+          const SizedBox(width: 12),
           Expanded(child: OutlinedButton.icon(onPressed: () => _answerPractice(false), icon: const Icon(Icons.refresh), label: const Text('再练一次'), style: OutlinedButton.styleFrom(foregroundColor: Colors.orange, padding: const EdgeInsets.symmetric(vertical: 14)))),
         ]),
-        const SizedBox(height: 20),
       ])),
     );
   }
