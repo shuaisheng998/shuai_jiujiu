@@ -153,6 +153,16 @@ class WordBank {
       {'e': 'cold', 'c': '冷的；感冒', 'p': '/kəʊld/', 'd': '形容词/名词，have a cold 感冒了', 'ex': 'I caught a cold last week.', 'ex_cn': '我上周感冒了。'},
       {'e': 'warm', 'c': '温暖的', 'p': '/wɔːm/', 'd': '形容词，warm up 热身', 'ex': 'Spring is warm and comfortable.', 'ex_cn': '春天温暖舒适。'},
       {'e': 'cool', 'c': '凉爽的；酷的', 'p': '/kuːl/', 'd': '形容词，cool! 太酷了！', 'ex': 'It is cool in autumn.', 'ex_cn': '秋天天气凉爽。'},
+    ];
+    return data.map((e) => Word(
+      english: e['e']!, chinese: e['c']!, pronunciation: e['p'],
+      example: e['ex'], exampleChinese: e['ex_cn'],
+      detailExplanation: e['d'], level: 'grade7',
+    )).toList();
+  }
+
+  static List<Word> getGrade8Words() {
+    final data = <Map<String, String>>[
       {'e': 'happy', 'c': '高兴的', 'p': '/ˈhæpi/', 'd': '形容词，be happy to do 很高兴做...', 'ex': 'I am very happy to see you.', 'ex_cn': '我很高兴见到你。'},
       {'e': 'sad', 'c': '悲伤的', 'p': '/sæd/', 'd': '形容词，feel sad 感到难过', 'ex': 'She felt sad when her friend moved away.', 'ex_cn': '她的朋友搬走后她感到难过。'},
       {'e': 'angry', 'c': '生气的', 'p': '/ˈæŋɡri/', 'd': '形容词，be angry with sb. 生某人的气', 'ex': 'Do not be angry with me.', 'ex_cn': '不要生我的气。'},
@@ -376,7 +386,17 @@ class WordBank {
       {'e': 'ourselves', 'c': '我们自己', 'p': '/aʊəˈselvz/', 'd': '反身代词，by ourselves 我们自己（独自）', 'ex': 'We enjoyed ourselves at the party.', 'ex_cn': '我们在派对上玩得很开心。'},
       {'e': 'yourselves', 'c': '你们自己', 'p': '/jɔːˈselvz/', 'd': '反身代词（复数）', 'ex': 'Please behave yourselves in class.', 'ex_cn': '请在课堂上表现好。'},
       {'e': 'themselves', 'c': '他们自己', 'p': '/ðəmˈselvz/', 'd': '反身代词（复数）', 'ex': 'They taught themselves English.', 'ex_cn': '他们自学了英语。'},
-      // === 追加初中词汇 ===
+    ];
+    return data.map((e) => Word(
+      english: e['e']!, chinese: e['c']!, pronunciation: e['p'],
+      example: e['ex'], exampleChinese: e['ex_cn'],
+      detailExplanation: e['d'], level: 'grade8',
+    )).toList();
+  }
+
+  static List<Word> getGrade9Words() {
+    final data = <Map<String, String>>[
+      // === 初三词汇（追加初中词汇+进阶） ===
       {'e': 'Monday', 'c': '星期一', 'p': '/ˈmʌndeɪ/', 'd': 'on Monday 在星期一，一周的第一天', 'ex': 'This is a good example of "Monday".', 'ex_cn': '这是"Monday"的一个好例子。'},
       {'e': 'Tuesday', 'c': '星期二', 'p': '/ˈtjuːzdeɪ/', 'd': 'on Tuesday', 'ex': 'This is a good example of "Tuesday".', 'ex_cn': '这是"Tuesday"的一个好例子。'},
       {'e': 'Wednesday', 'c': '星期三', 'p': '/ˈwenzdeɪ/', 'd': 'on Wednesday', 'ex': 'This is a good example of "Wednesday".', 'ex_cn': '这是"Wednesday"的一个好例子。'},
@@ -498,7 +518,7 @@ class WordBank {
 	      example: e['ex'],
 	      exampleChinese: e['ex_cn'],
 	      detailExplanation: e['d'],
-	      level: 'grade7',
+	      level: 'grade9',
 	    )).toList();
 	  }
 
@@ -705,7 +725,17 @@ class WordBank {
       {'e': 'derive', 'c': '来自；源于', 'p': '/dɪˈraɪv/', 'd': 'derive from 来自，同义词originate from', 'ex': 'The word derives from Latin.', 'ex_cn': '这个词源于拉丁语。'},
       {'e': 'deserve', 'c': '值得', 'p': '/dɪˈzɜːv/', 'd': 'deserve to do 值得做，deserve it 活该/应得', 'ex': 'You deserve a reward for your hard work.', 'ex_cn': '你的努力值得奖励。'},
       {'e': 'desperate', 'c': '绝望的；拼命的', 'p': '/ˈdespərət/', 'd': 'desperate for 极度渴望', 'ex': 'He was desperate for help.', 'ex_cn': '他极其需要帮助。'},
-      // === 追加高中词汇 ===
+    ];
+    return data.map((e) => Word(
+      english: e['e']!, chinese: e['c']!, pronunciation: e['p'],
+      example: e['ex'], exampleChinese: e['ex_cn'],
+      detailExplanation: e['d'], level: 'grade10',
+    )).toList();
+  }
+
+  static List<Word> getGrade11Words() {
+    final data = <Map<String, String>>[
+      // === 追加高中词汇（高二） ===
       {'e': 'determine', 'c': '决定；决心', 'p': '/dɪˈtɜːmɪn/', 'd': 'determine to do 决心做，determination 决心', 'ex': 'She determined to work harder.', 'ex_cn': '她决心更加努力。'},
       {'e': 'devote', 'c': '奉献；致力于', 'p': '/dɪˈvəʊt/', 'd': 'devote oneself to 致力于，devotion 奉献', 'ex': 'She devoted herself to teaching.', 'ex_cn': '她致力于教学事业。'},
       {'e': 'distinguish', 'c': '区分；辨别', 'p': '/dɪˈstɪŋɡwɪʃ/', 'd': 'distinguish A from B 区分A和B', 'ex': 'Can you distinguish between the two colors?', 'ex_cn': '你能区分这两种颜色吗？'},
@@ -888,6 +918,16 @@ class WordBank {
       {'e': 'remark', 'c': '评论；注意到', 'p': '/rɪˈmɑːk/', 'd': 'remarkable 显著的，remark on 评论', 'ex': 'Her remarkable progress surprised everyone.', 'ex_cn': '她显著的进步让所有人惊讶。'},
       {'e': 'remedy', 'c': '补救；治疗', 'p': '/ˈremədi/', 'd': 'remedy the situation 补救情况', 'ex': 'We need to find a remedy for the problem.', 'ex_cn': '我们需要找到解决问题的办法。'},
       {'e': 'remote', 'c': '遥远的；偏僻的', 'p': '/rɪˈməʊt/', 'd': 'remote control 遥控器', 'ex': 'He lives in a remote village.', 'ex_cn': '他住在一个偏远的村庄。'},
+    ];
+    return data.map((e) => Word(
+      english: e['e']!, chinese: e['c']!, pronunciation: e['p'],
+      example: e['ex'], exampleChinese: e['ex_cn'],
+      detailExplanation: e['d'], level: 'grade11',
+    )).toList();
+  }
+
+  static List<Word> getGrade12Words() {
+    final data = <Map<String, String>>[
       {'e': 'represent', 'c': '代表；表示', 'p': '/ˌreprɪˈzent/', 'd': 'representative 代表（人）', 'ex': 'Our class chose him to represent us.', 'ex_cn': '我们班选他代表我们。'},
       {'e': 'reputation', 'c': '名声；声誉', 'p': '/ˌrepjuˈteɪʃn/', 'd': 'have a good reputation 声誉好', 'ex': 'She has a good reputation at school.', 'ex_cn': '她在学校有很好的声誉。'},
       {'e': 'request', 'c': '请求；要求', 'p': '/rɪˈkwest/', 'd': 'request help 请求帮助', 'ex': 'I requested some information from them.', 'ex_cn': '我向他们请求了一些信息。'},
@@ -984,38 +1024,15 @@ class WordBank {
 	      example: e['ex'],
 	      exampleChinese: e['ex_cn'],
 	      detailExplanation: e['d'],
-      level: 'grade10',
+      level: 'grade12',
     )).toList();
   }
 
-  static List<Word> getGrade8Words() {
-    return getGrade7Words().map((w) => Word(
-      english: w.english, chinese: w.chinese, pronunciation: w.pronunciation,
-      example: w.example, exampleChinese: w.exampleChinese,
-      detailExplanation: w.detailExplanation, level: 'grade8',
-    )).toList();
+  static List<Word> getAllWords() {
+    return [...getGrade7Words(), ...getGrade8Words(), ...getGrade9Words(),
+            ...getGrade10Words(), ...getGrade11Words(), ...getGrade12Words()];
   }
-  static List<Word> getGrade9Words() {
-    return getGrade7Words().map((w) => Word(
-      english: w.english, chinese: w.chinese, pronunciation: w.pronunciation,
-      example: w.example, exampleChinese: w.exampleChinese,
-      detailExplanation: w.detailExplanation, level: 'grade9',
-    )).toList();
-  }
-  static List<Word> getGrade11Words() {
-    return getGrade10Words().map((w) => Word(
-      english: w.english, chinese: w.chinese, pronunciation: w.pronunciation,
-      example: w.example, exampleChinese: w.exampleChinese,
-      detailExplanation: w.detailExplanation, level: 'grade11',
-    )).toList();
-  }
-  static List<Word> getGrade12Words() {
-    return getGrade10Words().map((w) => Word(
-      english: w.english, chinese: w.chinese, pronunciation: w.pronunciation,
-      example: w.example, exampleChinese: w.exampleChinese,
-      detailExplanation: w.detailExplanation, level: 'grade12',
-    )).toList();
-  }
+}
 
   static List<Word> getAllWords() {
     return [...getGrade7Words(), ...getGrade10Words()];
