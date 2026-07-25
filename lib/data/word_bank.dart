@@ -1383,7 +1383,7 @@ class WordBank {
       {'e': 'prolific', 'c': '多产的；丰富的', 'p': '/prəˈlɪfɪk/', 'd': 'a prolific writer 多产的作家', 'ex': 'She is a prolific writer of novels.', 'ex_cn': '她是一位多产的小说家。'},
       {'e': 'reciprocal', 'c': '相互的；互惠的', 'p': '/rɪˈsɪprəkl/', 'd': 'reciprocal respect 相互尊重', 'ex': 'Friendship should be reciprocal.', 'ex_cn': '友谊应该是相互的。'},
       {'e': 'skeptical', 'c': '怀疑的', 'p': '/ˈskeptɪkl/', 'd': 'be skeptical about 对...怀疑', 'ex': 'I am skeptical about the claim.', 'ex_cn': '我对这个说法持怀疑态度。'},
-      {'e': solidarity', 'c': '团结', 'p': '/ˌsɒlɪˈdærəti/', 'd': 'show solidarity 显示团结', 'ex': 'We stand in solidarity with our friends.', 'ex_cn': '我们和朋友们团结一致。'},
+      {'e': 'solidarity', 'c': '团结', 'p': '/ˌsɒlɪˈdærəti/', 'd': 'show solidarity 显示团结', 'ex': 'We stand in solidarity with our friends.', 'ex_cn': '我们和朋友们团结一致。'},
       {'e': 'stimulate', 'c': '刺激；激发', 'p': '/ˈstɪmjuleɪt/', 'd': 'stimulate interest 激发兴趣', 'ex': 'Good questions stimulate thinking.', 'ex_cn': '好的问题激发思考。'},
       {'e': 'subsequently', 'c': '随后；后来', 'p': '/ˈsʌbsɪkwəntli/', 'd': '= later 随后', 'ex': 'She graduated and subsequently found a job.', 'ex_cn': '她毕业后随后找到了工作。'},
       {'e': 'synthesize', 'c': '综合；合成', 'p': '/ˈsɪnθəsaɪz/', 'd': 'synthesize information 综合信息', 'ex': 'You need to synthesize ideas from different sources.', 'ex_cn': '你需要综合不同来源的想法。'},
