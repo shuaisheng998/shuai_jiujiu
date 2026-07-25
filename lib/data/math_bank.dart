@@ -1908,6 +1908,17 @@ class MathBank {
         steps: ['第1步：∫(2x)dx=2×x²/2+C', '第2步：=x²+C'],
         knowledgePoint: '基本积分', category: '导数', level: 'grade10', difficulty: 3,
       ),
+      // === 新增扩展题 ===
+      MathQuestion(question: '解方程：5x - 3 = 2x + 6', options: ['2', '3', '4', '5'], correctIndex: 1, explanation: '移项：5x-2x=6+3', steps: ['📌 两边都有x → 移项', '第1步：5x-3=2x+6', '第2步：5x-2x=6+3', '第3步：3x=9，x=3'], knowledgePoint: '含x两边方程', category: '代数', level: 'grade7', difficulty: 3),
+      MathQuestion(question: '一个数的3倍加5等于20，这个数是？', options: ['3', '5', '10', '15'], correctIndex: 1, explanation: '3x+5=20 → 3x=15 → x=5', steps: ['📌 应用题转方程', '第1步：设这个数为x', '第2步：3x+5=20', '第3步：3x=15，x=5'], knowledgePoint: '列方程解应用题', category: '应用题', level: 'grade7', difficulty: 3),
+      MathQuestion(question: '数据1,2,2,3,4,5的众数是？', options: ['1', '2', '3', '4'], correctIndex: 1, explanation: '出现次数最多的数是2（出现2次）', steps: ['📌 众数=出现最多的值', '第1步：统计每个数出现次数', '第2步：2出现2次最多，众数=2'], knowledgePoint: '众数', category: '统计', level: 'grade7', difficulty: 1),
+      MathQuestion(question: '数据3,5,7,9的平均数是？', options: ['5', '6', '7', '8'], correctIndex: 1, explanation: '(3+5+7+9)÷4=6', steps: ['📌 平均数=总和÷个数', '第1步：3+5+7+9=24', '第2步：24÷4=6'], knowledgePoint: '平均数', category: '统计', level: 'grade7', difficulty: 1),
+      MathQuestion(question: '一个长方形的周长是20cm，长是6cm，宽是？', options: ['3cm', '4cm', '5cm', '7cm'], correctIndex: 1, explanation: '(长+宽)×2=20 → 6+宽=10 → 宽=4', steps: ['📌 周长=2×(长+宽)', '第1步：20=2×(6+宽)', '第2步：10=6+宽，宽=4'], knowledgePoint: '长方形周长逆运算', category: '几何', level: 'grade7', difficulty: 2),
+      MathQuestion(question: '圆的半径扩大2倍，面积扩大几倍？', options: ['2', '4', '6', '8'], correctIndex: 1, explanation: '面积与半径的平方成正比，2²=4倍', steps: ['📌 S=πr²，r变2倍→S变4倍', '第1步：原面积S₁=πr²', '第2步：新面积S₂=π(2r)²=4πr²', '第3步：S₂÷S₁=4'], knowledgePoint: '圆面积与半径关系', category: '几何', level: 'grade7', difficulty: 3),
+      MathQuestion(question: '下列哪个数是素数？', options: ['1', '4', '7', '9'], correctIndex: 2, explanation: '素数=只有1和本身两个因数的数，7是素数', steps: ['📌 素数定义：>1且只有1和自己两个因数', '第1步：1不是素数', '第2步：4=2×2不是', '第3步：7只有1×7→是素数', '第4步：9=3×3不是'], knowledgePoint: '素数判断', category: '代数', level: 'grade7', difficulty: 2),
+      MathQuestion(question: '12和18的最大公因数是？', options: ['2', '3', '6', '12'], correctIndex: 2, explanation: '12=2²×3, 18=2×3², 最大公因数=2×3=6', steps: ['📌 最大公因数=公有质因数乘积', '第1步：12=2×2×3', '第2步：18=2×3×3', '第3步：公有：2×3=6'], knowledgePoint: '最大公因数', category: '代数', level: 'grade7', difficulty: 2),
+      MathQuestion(question: '12和18的最小公倍数是？', options: ['24', '36', '48', '72'], correctIndex: 1, explanation: 'LCM(12,18)=2²×3²=36', steps: ['📌 最小公倍数=所有质因数的最高次幂乘积', '第1步：12=2²×3', '第2步：18=2×3²', '第3步：LCM=2²×3²=36'], knowledgePoint: '最小公倍数', category: '代数', level: 'grade7', difficulty: 2),
+      MathQuestion(question: '若3x+2=14，则6x-5=？', options: ['13', '17', '19', '23'], correctIndex: 2, explanation: '3x+2=14→x=4→6×4-5=19', steps: ['📌 先求x再代入', '第1步：3x=12，x=4', '第2步：6×4-5=24-5=19'], knowledgePoint: '先解方程再代入', category: '代数', level: 'grade7', difficulty: 3),
     ];
   }
 
