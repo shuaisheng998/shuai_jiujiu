@@ -1,7 +1,7 @@
 import '../models/grammar_question.dart';
 
 class GrammarBank {
-  static List<GrammarQuestion> getJuniorQuestions() {
+  static List<GrammarQuestion> getGrade7Questions() {
     return [
       // ===== be动词 =====
       GrammarQuestion(
@@ -10,7 +10,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: 'I 后面永远用 am。I am... 是固定搭配。',
         category: 'be动词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       GrammarQuestion(
@@ -19,7 +19,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'She/He/It 是第三人称单数，用 is。',
         category: 'be动词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       GrammarQuestion(
@@ -28,7 +28,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'They/We/You 是复数，用 are。',
         category: 'be动词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       GrammarQuestion(
@@ -37,7 +37,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'My mother 是第三人称单数（= She），所以用 is。',
         category: 'be动词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       GrammarQuestion(
@@ -46,7 +46,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'The books 是复数，用 are。',
         category: 'be动词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       GrammarQuestion(
@@ -55,7 +55,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'last year 是过去的时间，He 是单数，be动词过去式用 was。',
         category: 'be动词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
 
@@ -66,7 +66,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'He 是第三人称单数，一般现在时动词要加 -s/-es。go 变 goes。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -75,7 +75,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: 'They 是复数，一般现在时用动词原形 play。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -84,7 +84,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'She 是第三人称单数，have 要变成 has（不规则变化）。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -93,7 +93,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'My father（= He）是第三人称单数，read 加 -s 变成 reads。注意 read 的过去式也是 read（发音不同）。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -102,7 +102,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'The sun（= It）是第三人称单数，加 -s。而且这是客观真理，用一般现在时。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
 
@@ -113,7 +113,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'Look! 和 now 表示正在发生，用现在进行时 am/is/are + doing。They 用 are playing。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -122,7 +122,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'Listen! 表示正在听，有人正在唱歌，用现在进行时。Someone 是单数，用 is singing。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -131,7 +131,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'right now 是正在进行的时间标志词，用现在进行时。The students 是复数，用 are having。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
 
@@ -142,7 +142,7 @@ class GrammarBank {
         correctIndex: 3,
         explanation: 'yesterday 是过去的时间，go 的过去式是不规则变化 went。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -151,7 +151,7 @@ class GrammarBank {
         correctIndex: 3,
         explanation: 'last night 是过去的时间，do 的过去式是 did。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -160,7 +160,7 @@ class GrammarBank {
         correctIndex: 3,
         explanation: 'last weekend 是过去的时间，watch 是规则动词，过去式加 -ed 变成 watched。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -169,7 +169,7 @@ class GrammarBank {
         correctIndex: 3,
         explanation: 'last month 是过去的时间，get 的过去式是不规则变化 got。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
 
@@ -180,7 +180,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'tomorrow 表示将来。will + 动词原形 构成一般将来时。will visit。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -189,7 +189,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'next week 是未来的时间，用一般将来时 will + 动词原形。will go。',
         category: '时态',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -198,7 +198,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: '邀请某人参加未来的聚会，用一般将来时 Will you...?',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
 
@@ -209,7 +209,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: 'She 是第三人称单数，变一般疑问句用 Does 开头。Does she like...?',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -218,7 +218,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'You 是第二人称/复数，变一般疑问句用 Do 开头。Do you like...?',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -227,7 +227,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: '这是问"他是学生吗？"，be动词直接提前。He 是单数，用 Is。',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       GrammarQuestion(
@@ -236,7 +236,7 @@ class GrammarBank {
         correctIndex: 3,
         explanation: '现在进行时的疑问句，be动词提前。They 是复数，用 Are。Are they playing...?',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
 
@@ -247,7 +247,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: 'I 是第一人称，否定句用 don\'t + 动词原形。I don\'t like...',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -256,7 +256,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'He 是第三人称单数，否定句用 doesn\'t + 动词原形。He doesn\'t like...',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -265,7 +265,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: '这是be动词的否定句。She is → She is not (isn\'t)。',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -274,7 +274,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'yesterday 是过去时，They 是复数，be动词过去式否定用 weren\'t。',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
 
@@ -285,7 +285,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: '具体时间点前面用 at。at 7 o\'clock。',
         category: '介词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -294,7 +294,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: '星期几前面用 on。on Monday。',
         category: '介词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -303,7 +303,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: '年份前面用 in。in 2008。in + 年/月/季节。',
         category: '介词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -312,7 +312,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: '"在树上"（树里面/枝叶中）用 in the tree。on the tree 是指长在树上的果实。',
         category: '介词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -321,7 +321,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: '书在包里面，用 in。',
         category: '介词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       GrammarQuestion(
@@ -330,7 +330,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: '猫在椅子上面（接触面），用 on。',
         category: '介词',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
 
@@ -341,7 +341,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: 'a book 是单数，用 There is。There be 表示"有"。',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -350,7 +350,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'many students 是复数，用 There are。',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -359,13 +359,13 @@ class GrammarBank {
         correctIndex: 0,
         explanation: 'water 是不可数名词，用 There is。不可数名词永远当单数用。',
         category: '句式',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
     ];
   }
 
-  static List<GrammarQuestion> getSeniorQuestions() {
+  static List<GrammarQuestion> getGrade10Questions() {
     return [
       // ===== 现在完成时 =====
       GrammarQuestion(
@@ -374,7 +374,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'have/has never been to 表示"从未去过"。句意：我从未去过北京。',
         category: '时态',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
       GrammarQuestion(
@@ -383,7 +383,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'has already + 过去分词（done）。finish 的过去分词是 finished。',
         category: '时态',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
       GrammarQuestion(
@@ -392,7 +392,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: '现在完成时的疑问句用 Have/Has + 主语 + 过去分词。You 用 Have。',
         category: '时态',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
       GrammarQuestion(
@@ -401,7 +401,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: 'since + 时间点（2010年），表示"自从2010年以来"。for + 时间段。',
         category: '时态',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
       GrammarQuestion(
@@ -410,7 +410,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'for + 时间段（three years），表示"持续了三年"。',
         category: '时态',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
 
@@ -421,7 +421,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: '英语被全世界说，用被动语态 be + 过去分词。English is spoken。',
         category: '语态',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
       GrammarQuestion(
@@ -430,7 +430,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'yesterday 是过去时，蛋糕被妈妈做，用一般过去时的被动语态 was made。',
         category: '语态',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
       GrammarQuestion(
@@ -439,7 +439,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: '教室被每天打扫，用被动语态 is cleaned。every day 是一般现在时。',
         category: '语态',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
 
@@ -450,7 +450,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'should 表示"应该"，带有建议和义务的意思。You should... 你应该...',
         category: '情态动词',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -459,7 +459,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'May I...? 是礼貌地请求许可，"我可以...吗？" 比 Can I 更礼貌。',
         category: '情态动词',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -468,7 +468,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'must not 表示"禁止"，语气最强。这里表示"禁止吸烟"。',
         category: '情态动词',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -477,7 +477,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: 'can 表示"能够"，此处表示"他会说三种语言"的能力。',
         category: '情态动词',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
 
@@ -488,7 +488,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'enjoy doing sth. 是固定用法，enjoy 后面接动名词（-ing形式）。',
         category: '非谓语',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
       GrammarQuestion(
@@ -497,7 +497,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'want to do sth. 是固定用法，want 后面接不定式 to do。',
         category: '非谓语',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
       GrammarQuestion(
@@ -506,7 +506,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: 'stop doing 表示"停止正在做的事"。她累了所以停止跑步。stop to do 是"停下来去做另一件事"。',
         category: '非谓语',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
       GrammarQuestion(
@@ -515,7 +515,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: 'It\'s + adj. + to do sth. 是固定句型。It\'s important to learn...',
         category: '非谓语',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
 
@@ -526,7 +526,7 @@ class GrammarBank {
         correctIndex: 0,
         explanation: '先行词 The boy 是人，定语从句用 who 引导。who is standing there 修饰 the boy。',
         category: '从句',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 4,
       ),
       GrammarQuestion(
@@ -535,7 +535,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: '先行词 The book 是物，定语从句用 which 或 that 引导。which I read yesterday 修饰 the book。',
         category: '从句',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 4,
       ),
       GrammarQuestion(
@@ -544,7 +544,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: '先行词 the school 是地点，定语从句用 where 引导。where I studied = 我学习过的地方。',
         category: '从句',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 4,
       ),
 
@@ -555,7 +555,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'than 是比较级的标志词，tall 的比较级是 taller。',
         category: '形容词',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -564,7 +564,7 @@ class GrammarBank {
         correctIndex: 2,
         explanation: '最高级前面有 the，后面有表示范围的 ever seen。good 的最高级是 best。',
         category: '形容词',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       GrammarQuestion(
@@ -573,7 +573,7 @@ class GrammarBank {
         correctIndex: 1,
         explanation: 'than 是比较级标志。difficult 是多音节词，不用加 -er，在前面加 more。',
         category: '形容词',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       // === 追加语法题 ===
@@ -582,139 +582,168 @@ class GrammarBank {
         options: ['is', 'are', 'am', 'be'],
         correctIndex: 0,
         explanation: 'There be句型的就近原则：be动词与最近的名词保持一致。a book是单数，用is。',
-        category: '句式', level: 'junior', difficulty: 2,
+        category: '句式', level: 'grade7', difficulty: 2,
       ),
       GrammarQuestion(
         question: 'I ___ a book when he came in.',
         options: ['read', 'reads', 'was reading', 'have read'],
         correctIndex: 2,
         explanation: 'when he came in是过去的时间点，那时正在读书，用过去进行时was reading。',
-        category: '时态', level: 'junior', difficulty: 3,
+        category: '时态', level: 'grade7', difficulty: 3,
       ),
       GrammarQuestion(
         question: 'If it ___ tomorrow, we won\'t go out.',
         options: ['rain', 'rains', 'rained', 'will rain'],
         correctIndex: 1,
         explanation: 'if引导条件状语从句，要用一般现在时表将来。it是第三人称单数，加-s。',
-        category: '时态', level: 'junior', difficulty: 3,
+        category: '时态', level: 'grade7', difficulty: 3,
       ),
       GrammarQuestion(
         question: 'Tom is ___ than his brother.',
         options: ['tall', 'taller', 'tallest', 'more tall'],
         correctIndex: 1,
         explanation: 'than是比较级标志。tall是单音节词，比较级加-er。',
-        category: '形容词', level: 'junior', difficulty: 1,
+        category: '形容词', level: 'grade7', difficulty: 1,
       ),
       GrammarQuestion(
         question: 'She is ___ girl in our class.',
         options: ['tall', 'taller', 'tallest', 'the tallest'],
         correctIndex: 3,
         explanation: 'in our class表示范围，最高级前面要加the。',
-        category: '形容词', level: 'junior', difficulty: 2,
+        category: '形容词', level: 'grade7', difficulty: 2,
       ),
       GrammarQuestion(
         question: 'Would you like ___ tea?',
         options: ['some', 'any', 'a', 'many'],
         correctIndex: 0,
         explanation: 'Would you like是邀请，疑问句也用some。tea不可数。',
-        category: '句式', level: 'junior', difficulty: 2,
+        category: '句式', level: 'grade7', difficulty: 2,
       ),
       GrammarQuestion(
         question: 'I have ___ to tell you.',
         options: ['something important', 'important something', 'anything important', 'important anything'],
         correctIndex: 0,
         explanation: '形容词修饰不定代词要后置。something用于肯定句。',
-        category: '句式', level: 'junior', difficulty: 2,
+        category: '句式', level: 'grade7', difficulty: 2,
       ),
       GrammarQuestion(
         question: 'The bridge ___ last year.',
         options: ['built', 'is built', 'was built', 'builds'],
         correctIndex: 2,
         explanation: '桥被建造，被动语态。last year过去时，was built。',
-        category: '语态', level: 'senior', difficulty: 3,
+        category: '语态', level: 'grade10', difficulty: 3,
       ),
       GrammarQuestion(
         question: 'I ___ like to have a cup of coffee.',
         options: ['will', 'would', 'should', 'could'],
         correctIndex: 1,
         explanation: 'I would like to do 是礼貌的说法，would like固定搭配。',
-        category: '情态动词', level: 'senior', difficulty: 2,
+        category: '情态动词', level: 'grade10', difficulty: 2,
       ),
       GrammarQuestion(
         question: 'He is used to ___ up early.',
         options: ['getting', 'get', 'gets', 'got'],
         correctIndex: 0,
         explanation: 'be used to doing sth. 习惯于做某事，to是介词。',
-        category: '非谓语', level: 'senior', difficulty: 3,
+        category: '非谓语', level: 'grade10', difficulty: 3,
       ),
       GrammarQuestion(
         question: 'I used to ___ in the countryside.',
         options: ['live', 'living', 'lived', 'lives'],
         correctIndex: 0,
         explanation: 'used to do sth. 过去常常做某事，to后接动词原形。',
-        category: '非谓语', level: 'senior', difficulty: 3,
+        category: '非谓语', level: 'grade10', difficulty: 3,
       ),
       GrammarQuestion(
         question: '___ interesting the movie is!',
         options: ['What', 'How', 'What an', 'How an'],
         correctIndex: 1,
         explanation: 'How + 形容词 + 主语 + 谓语！感叹句结构。',
-        category: '句式', level: 'senior', difficulty: 3,
+        category: '句式', level: 'grade10', difficulty: 3,
       ),
       GrammarQuestion(
         question: 'Neither Tom nor his friends ___ interested.',
         options: ['is', 'are', 'was', 'has'],
         correctIndex: 1,
         explanation: 'neither...nor就近原则，friends复数用are。',
-        category: '句式', level: 'senior', difficulty: 3,
+        category: '句式', level: 'grade10', difficulty: 3,
       ),
       GrammarQuestion(
         question: 'By the time I arrived, they ___ left.',
         options: ['have', 'had', 'has', 'were'],
         correctIndex: 1,
         explanation: 'by the time...，"已经离开"发生在"到达"之前，过去完成时had done。',
-        category: '时态', level: 'senior', difficulty: 4,
+        category: '时态', level: 'grade10', difficulty: 4,
       ),
       GrammarQuestion(
         question: 'This is the best place ___ I have visited.',
         options: ['which', 'that', 'where', 'what'],
         correctIndex: 1,
         explanation: '先行词被最高级修饰时，只能用that。',
-        category: '从句', level: 'senior', difficulty: 4,
+        category: '从句', level: 'grade10', difficulty: 4,
       ),
       GrammarQuestion(
         question: 'The teacher told us ___ late again.',
         options: ['not be', 'not to be', 'to not be', 'don\'t be'],
         correctIndex: 1,
         explanation: 'tell sb. not to do sth. 叫某人不要做某事。',
-        category: '非谓语', level: 'senior', difficulty: 3,
+        category: '非谓语', level: 'grade10', difficulty: 3,
       ),
       GrammarQuestion(
         question: 'I don\'t know ___ he did it.',
         options: ['how', 'what', 'which', 'whose'],
         correctIndex: 0,
         explanation: 'how表示方式，我不知道他是怎么做到的。',
-        category: '从句', level: 'senior', difficulty: 3,
+        category: '从句', level: 'grade10', difficulty: 3,
       ),
       GrammarQuestion(
         question: 'He ran fast ___ he could catch the bus.',
         options: ['such that', 'so that', 'in order', 'so as'],
         correctIndex: 1,
         explanation: 'so that引导目的状语从句。',
-        category: '从句', level: 'senior', difficulty: 3,
+        category: '从句', level: 'grade10', difficulty: 3,
       ),
       GrammarQuestion(
         question: 'The more you read, ___ you will become.',
         options: ['the wise', 'the wiser', 'wiser', 'wisely'],
         correctIndex: 1,
         explanation: 'the + 比较级，the + 比较级，表示"越...就越..."。',
-        category: '句式', level: 'senior', difficulty: 3,
+        category: '句式', level: 'grade10', difficulty: 3,
       ),
     ];
   }
 
   static List<GrammarQuestion> getAllQuestions() {
-    return [...getJuniorQuestions(), ...getSeniorQuestions()];
+    return [...getGrade7Questions(), ...getGrade10Questions()];
+  }
+
+  static List<GrammarQuestion> getGrade8Questions() {
+    return getGrade7Questions().map((q) => GrammarQuestion(
+      question: q.question, options: q.options, correctIndex: q.correctIndex,
+      explanation: q.explanation, category: q.category,
+      level: 'grade8', difficulty: q.difficulty,
+    )).toList();
+  }
+  static List<GrammarQuestion> getGrade9Questions() {
+    return getGrade7Questions().map((q) => GrammarQuestion(
+      question: q.question, options: q.options, correctIndex: q.correctIndex,
+      explanation: q.explanation, category: q.category,
+      level: 'grade9', difficulty: q.difficulty,
+    )).toList();
+  }
+  static List<GrammarQuestion> getGrade11Questions() {
+    return getGrade10Questions().map((q) => GrammarQuestion(
+      question: q.question, options: q.options, correctIndex: q.correctIndex,
+      explanation: q.explanation, category: q.category,
+      level: 'grade11', difficulty: q.difficulty,
+    )).toList();
+  }
+  static List<GrammarQuestion> getGrade12Questions() {
+    return getGrade10Questions().map((q) => GrammarQuestion(
+      question: q.question, options: q.options, correctIndex: q.correctIndex,
+      explanation: q.explanation, category: q.category,
+      level: 'grade12', difficulty: q.difficulty,
+    )).toList();
   }
 
   static List<String> getCategories() {

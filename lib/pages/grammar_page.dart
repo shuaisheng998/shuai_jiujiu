@@ -19,13 +19,14 @@ class _GrammarPageState extends State<GrammarPage> {
   bool? _isCorrect;
   int _correctCount = 0;
   int _totalCount = 0;
-  String _selectedLevel = 'junior';
+  String _selectedLevel = 'grade7';
   String? _selectedCategory;
 
   @override
   void initState() {
     super.initState();
-    _questions = GrammarBank.getJuniorQuestions()..shuffle(Random());
+    _questions = GrammarBank.getGrade7Questions()..shuffle(Random());
+    _restoreProgress();
   }
 
   void _switchLevel(String level) {
@@ -37,11 +38,39 @@ class _GrammarPageState extends State<GrammarPage> {
       _correctCount = 0;
       _totalCount = 0;
       _selectedCategory = null;
-      final source = level == 'junior'
-          ? GrammarBank.getJuniorQuestions()
-          : GrammarBank.getSeniorQuestions();
-      _questions = source..shuffle(Random());
+      _questions = _getQuestionsForLevel(level)..shuffle(Random());
     });
+  }
+
+  List<GrammarQuestion> _getQuestionsForLevel(String level) {
+    switch (level) {
+      case 'grade7': return GrammarBank.getGrade7Questions();
+      case 'grade8': return GrammarBank.getGrade8Questions();
+      case 'grade9': return GrammarBank.getGrade9Questions();
+      case 'grade10': return GrammarBank.getGrade10Questions();
+      case 'grade11': return GrammarBank.getGrade11Questions();
+      case 'grade12': return GrammarBank.getGrade12Questions();
+      default: return GrammarBank.getGrade7Questions();
+    }
+  }
+
+  Future<void> _restoreProgress() async {
+    final p = await StorageService.getGrammarProgress();
+    if (p != null && mounted) {
+      final level = p['level'] as String?;
+      final idx = p['index'] as int?;
+      if (level != null && idx != null && idx > 0) {
+        setState(() {
+          _selectedLevel = level;
+          _questions = _getQuestionsForLevel(level)..shuffle(Random());
+          _currentIndex = idx.clamp(0, _questions.length - 1);
+        });
+      }
+    }
+  }
+
+  Future<void> _saveProgress() async {
+    await StorageService.saveGrammarProgress(_selectedLevel, _selectedCategory, _currentIndex);
   }
 
   void _filterByCategory(String? category) {
@@ -52,9 +81,7 @@ class _GrammarPageState extends State<GrammarPage> {
       _isCorrect = null;
       _correctCount = 0;
       _totalCount = 0;
-      final source = _selectedLevel == 'junior'
-          ? GrammarBank.getJuniorQuestions()
-          : GrammarBank.getSeniorQuestions();
+      final source = _getQuestionsForLevel(_selectedLevel);
       if (category != null) {
         _questions = source.where((q) => q.category == category).toList()
           ..shuffle(Random());
@@ -101,6 +128,7 @@ class _GrammarPageState extends State<GrammarPage> {
       _selectedAnswer = null;
       _isCorrect = null;
     });
+    _saveProgress();
   }
 
   void _restart() {
@@ -171,15 +199,20 @@ class _GrammarPageState extends State<GrammarPage> {
       ),
       body: Column(
         children: [
-          // 等级和分类筛选
+          // 年级和分类筛选
           Padding(
             padding: const EdgeInsets.fromLTRB(12, 12, 12, 4),
             child: Row(
               children: [
-                _buildLevelChip('junior', '📗 基础语法'),
-                const SizedBox(width: 8),
-                _buildLevelChip('senior', '📘 进阶语法'),
-                const Spacer(),
+                Expanded(
+                  child: SizedBox(
+                    height: 36,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: _buildGradeChips(),
+                    ),
+                  ),
+                ),
                 Text(
                   '✅ $_correctCount / $_totalCount',
                   style: const TextStyle(fontSize: 13, color: Colors.green),
@@ -391,23 +424,32 @@ class _GrammarPageState extends State<GrammarPage> {
     );
   }
 
-  Widget _buildLevelChip(String level, String label) {
-    final isSelected = _selectedLevel == level;
-    return GestureDetector(
-      onTap: () => _switchLevel(level),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-        decoration: BoxDecoration(
-          color: isSelected ? Theme.of(context).colorScheme.primary : Colors.grey[200],
-          borderRadius: BorderRadius.circular(20),
+  List<Widget> _buildGradeChips() {
+    const grades = {
+      'grade7': '初一', 'grade8': '初二', 'grade9': '初三',
+      'grade10': '高一', 'grade11': '高二', 'grade12': '高三',
+    };
+    return grades.entries.map((e) {
+      final isSelected = _selectedLevel == e.key;
+      return Padding(
+        padding: const EdgeInsets.only(right: 6),
+        child: GestureDetector(
+          onTap: () => _switchLevel(e.key),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            decoration: BoxDecoration(
+              color: isSelected ? Theme.of(context).colorScheme.primary : Colors.grey[200],
+              borderRadius: BorderRadius.circular(18),
+            ),
+            child: Text(e.value, style: TextStyle(
+              color: isSelected ? Colors.white : Colors.black87,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+              fontSize: 13,
+            )),
+          ),
         ),
-        child: Text(label, style: TextStyle(
-          color: isSelected ? Colors.white : Colors.black87,
-          fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-          fontSize: 13,
-        )),
-      ),
-    );
+      );
+    }).toList();
   }
 
   Widget _buildCategoryChip(String? category, String label) {

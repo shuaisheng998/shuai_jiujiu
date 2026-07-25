@@ -1,7 +1,7 @@
 import '../models/word.dart';
 
 class WordBank {
-  static List<Word> getJuniorWords() {
+  static List<Word> getGrade7Words() {
     final data = <Map<String, String>>[
       // === 初中核心词汇 1500 精选 ===
       {'e': 'the', 'c': '这；那', 'p': '/ðə; ðiː/', 'd': '定冠词，表示特指的人或事物', 'ex': 'The sun rises in the east.', 'ex_cn': '太阳从东方升起。'},
@@ -230,7 +230,6 @@ class WordBank {
       {'e': 'cost', 'c': '花费（金钱/时间）', 'p': '/kɒst/', 'd': '动词，主语为物，sth. costs (sb.) money', 'ex': 'The new phone costs too much.', 'ex_cn': '这部新手机太贵了。'},
       {'e': 'spend', 'c': '花费（时间/钱）', 'p': '/spend/', 'd': '动词，人作主语，spend time on/in doing', 'ex': 'I spend two hours doing homework every day.', 'ex_cn': '我每天花两个小时做作业。'},
       {'e': 'bring', 'c': '带来', 'p': '/brɪŋ/', 'd': '动词，bring sth. to 带来（从远方到近处）', 'ex': 'Please bring your notebook tomorrow.', 'ex_cn': '明天请带上你的笔记本。'},
-      {'e': 'take', 'c': '拿走；花费；搭乘', 'p': '/teɪk/', 'd': '动词，take sth. to 带去（从近处到远方）', 'ex': 'This is a good example of "take".', 'ex_cn': '这是"take"的一个好例子。'},
       {'e': 'carry', 'c': '搬运；携带', 'p': '/ˈkæri/', 'd': '动词，carry重物', 'ex': 'Let me carry the heavy box for you.', 'ex_cn': '让我帮你搬这个重箱子。'},
       {'e': 'catch', 'c': '抓住；赶上（车）', 'p': '/kætʃ/', 'd': '动词，catch a bus 赶公交，catch a cold 感冒', 'ex': 'I need to catch the early bus tomorrow.', 'ex_cn': '我明天需要赶早班公交车。'},
       {'e': 'drive', 'c': '驾驶', 'p': '/draɪv/', 'd': '动词，drive a car 开车，drive sb. to 开车送某人去', 'ex': 'My father drives me to school every day.', 'ex_cn': '我爸爸每天开车送我去上学。'},
@@ -242,7 +241,6 @@ class WordBank {
       {'e': 'smell', 'c': '闻起来', 'p': '/smel/', 'd': '系动词，smell + adj. 闻起来...', 'ex': 'The flowers smell wonderful.', 'ex_cn': '这些花闻起来很香。'},
       {'e': 'taste', 'c': '尝起来', 'p': '/teɪst/', 'd': '系动词，taste + adj. 尝起来...', 'ex': 'The food tastes delicious.', 'ex_cn': '这食物尝起来很美味。'},
       {'e': 'sound', 'c': '听起来', 'p': '/saʊnd/', 'd': '系动词，sound + adj. 听起来...', 'ex': 'That sounds like a good idea.', 'ex_cn': '那听起来是个好主意。'},
-      {'e': 'look', 'c': '看起来', 'p': '/lʊk/', 'd': '系动词，look + adj. 看起来...', 'ex': 'Look at the blackboard, please.', 'ex_cn': '请看黑板。'},
       {'e': 'become', 'c': '变得；成为', 'p': '/bɪˈkʌm/', 'd': '系动词，become + 名词/形容词', 'ex': 'She became a teacher after graduation.', 'ex_cn': '她毕业后成为了一名老师。'},
       {'e': 'leave', 'c': '离开；留下', 'p': '/liːv/', 'd': '动词，leave for 动身去某地', 'ex': 'I leave home for school at seven.', 'ex_cn': '我七点离开家去上学。'},
       {'e': 'meet', 'c': '遇见；会面', 'p': '/miːt/', 'd': '动词，nice to meet you 很高兴见到你', 'ex': 'Nice to meet you.', 'ex_cn': '很高兴认识你。'},
@@ -350,7 +348,6 @@ class WordBank {
       {'e': 'since', 'c': '自从', 'p': '/sɪns/', 'd': '介词/连词，since+时间点，用现在完成时', 'ex': 'I have studied English since 2020.', 'ex_cn': '我从2020年开始学英语。'},
       {'e': 'ago', 'c': '以前', 'p': '/əˈɡəʊ/', 'd': '副词，一段时间+ago，用一般过去时', 'ex': 'I moved to this city two years ago.', 'ex_cn': '我两年前搬到了这个城市。'},
       {'e': 'before', 'c': '在…之前', 'p': '/bɪˈfɔː(r)/', 'd': '介词/连词/副词', 'ex': 'Wash your hands before eating.', 'ex_cn': '吃饭前要洗手。'},
-      {'e': 'after', 'c': '在…之后', 'p': '/ˈɑːftə(r)/', 'd': '介词/连词，after school 放学后', 'ex': 'Let us play football after school.', 'ex_cn': '放学后我们去踢足球吧。'},
       {'e': 'during', 'c': '在…期间', 'p': '/ˈdjʊərɪŋ/', 'd': '介词，during the summer 在夏天', 'ex': 'We had a test during the class.', 'ex_cn': '上课期间我们有一个小测。'},
       {'e': 'until', 'c': '直到', 'p': '/ənˈtɪl/', 'd': '连词/介词，not...until 直到...才', 'ex': 'I will wait here until you come back.', 'ex_cn': '我会在这里等你回来。'},
       {'e': 'while', 'c': '当…时候', 'p': '/waɪl/', 'd': '连词，引导时间状语从句', 'ex': 'I listened to music while doing homework.', 'ex_cn': '我做作业时听音乐。'},
@@ -362,7 +359,6 @@ class WordBank {
       {'e': 'that', 'c': '那个；引导从句', 'p': '/ðæt; ðət/', 'd': '指示代词/关系代词', 'ex': 'The book that I read is very interesting.', 'ex_cn': '我读的那本书非常有趣。'},
       {'e': 'those', 'c': '那些', 'p': '/ðəʊz/', 'd': 'that的复数形式', 'ex': 'Those apples are very sweet.', 'ex_cn': '那些苹果很甜。'},
       {'e': 'here', 'c': '这里', 'p': '/hɪə(r)/', 'd': '副词，here you are 给你', 'ex': 'Here is your book.', 'ex_cn': '这是你的书。'},
-      {'e': 'there', 'c': '那里', 'p': '/ðeə(r)/', 'd': '副词，over there 在那边', 'ex': 'There are many flowers in the garden.', 'ex_cn': '花园里有很多花。'},
       {'e': 'everywhere', 'c': '到处', 'p': '/ˈevriweə(r)/', 'd': '副词，近义词here and there', 'ex': 'I looked everywhere for my keys.', 'ex_cn': '我到处找了钥匙。'},
       {'e': 'somewhere', 'c': '某处', 'p': '/ˈsʌmweə(r)/', 'd': '副词，用于肯定句', 'ex': 'I left my phone somewhere in the house.', 'ex_cn': '我把手机落在房子的某个地方了。'},
       {'e': 'anywhere', 'c': '任何地方', 'p': '/ˈeniweə(r)/', 'd': '副词，用于否定/疑问句', 'ex': 'I cannot find my pen anywhere.', 'ex_cn': '我到处都找不到我的钢笔。'},
@@ -502,11 +498,11 @@ class WordBank {
 	      example: e['ex'],
 	      exampleChinese: e['ex_cn'],
 	      detailExplanation: e['d'],
-	      level: 'junior',
+	      level: 'grade7',
 	    )).toList();
 	  }
 
-	  static List<Word> getSeniorWords() {
+	  static List<Word> getGrade10Words() {
     final data = <Map<String, String>>[
       // === 高中核心词汇 200个 ===
       {'e': 'abandon', 'c': '放弃；遗弃', 'p': '/əˈbændən/', 'd': 'abandon a plan 放弃计划，abandon hope 放弃希望', 'ex': 'He had to abandon the project.', 'ex_cn': '他不得不放弃这个项目。'},
@@ -988,11 +984,40 @@ class WordBank {
 	      example: e['ex'],
 	      exampleChinese: e['ex_cn'],
 	      detailExplanation: e['d'],
-	      level: 'senior',
-	    )).toList();
+      level: 'grade10',
+    )).toList();
+  }
+
+  static List<Word> getGrade8Words() {
+    return getGrade7Words().map((w) => Word(
+      english: w.english, chinese: w.chinese, pronunciation: w.pronunciation,
+      example: w.example, exampleChinese: w.exampleChinese,
+      detailExplanation: w.detailExplanation, level: 'grade8',
+    )).toList();
+  }
+  static List<Word> getGrade9Words() {
+    return getGrade7Words().map((w) => Word(
+      english: w.english, chinese: w.chinese, pronunciation: w.pronunciation,
+      example: w.example, exampleChinese: w.exampleChinese,
+      detailExplanation: w.detailExplanation, level: 'grade9',
+    )).toList();
+  }
+  static List<Word> getGrade11Words() {
+    return getGrade10Words().map((w) => Word(
+      english: w.english, chinese: w.chinese, pronunciation: w.pronunciation,
+      example: w.example, exampleChinese: w.exampleChinese,
+      detailExplanation: w.detailExplanation, level: 'grade11',
+    )).toList();
+  }
+  static List<Word> getGrade12Words() {
+    return getGrade10Words().map((w) => Word(
+      english: w.english, chinese: w.chinese, pronunciation: w.pronunciation,
+      example: w.example, exampleChinese: w.exampleChinese,
+      detailExplanation: w.detailExplanation, level: 'grade12',
+    )).toList();
   }
 
   static List<Word> getAllWords() {
-    return [...getJuniorWords(), ...getSeniorWords()];
+    return [...getGrade7Words(), ...getGrade10Words()];
   }
 }

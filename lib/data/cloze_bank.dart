@@ -7,7 +7,7 @@ class ClozeBank {
       ClozeTest(
         id: 'junior_1',
         title: '努力学习的重要性',
-        level: 'junior',
+        level: 'grade7',
         translation: '汤姆过去不喜欢学校。他觉得功课很难。但是他的老师总是鼓励他。她说："不要放弃。一切都会慢慢变好。"汤姆开始每天多花时间学习。现在他的成绩好多了。他为自己感到骄傲。',
         passage: '''Tom didn't ___ school in the past. 
 He thought the lessons were ___. 
@@ -73,7 +73,7 @@ He is proud of ___.''',
       ClozeTest(
         id: 'junior_2',
         title: '怎样学好英语',
-        level: 'junior',
+        level: 'grade7',
         translation: '学英语最好的方式是多练习。每天读一些英语书。听英语歌也很有帮助。不要害怕犯错。错误是学习的一部分。坚持练习，你会进步的！',
         passage: '''The best ___ to learn English is to practice a lot. 
 ___ some English books every day. 
@@ -125,7 +125,7 @@ Keep ___ and you will improve!''',
       ClozeTest(
         id: 'junior_3',
         title: '我的周末',
-        level: 'junior',
+        level: 'grade8',
         translation: '上个周末我过得很愉快。星期六早上我和朋友踢了足球。下午我们看了电影。星期天我待在家里做作业。晚上我帮妈妈做晚饭。我很累但是很开心。',
         passage: '''I had a great ___ last weekend.
 On Saturday morning, I played ___ with my friends.
@@ -177,7 +177,7 @@ I was tired ___ happy.''',
       ClozeTest(
         id: 'senior_1',
         title: '坚持你的梦想',
-        level: 'senior',
+        level: 'grade10',
         translation: '每个人都有自己的梦想。但是实现梦想并不容易。在路上会遇到很多困难。重要的是不要放弃。一步一步地走，总有一天你会成功的。',
         passage: '''Everyone has their own ___. 
 But it's not easy to ___ your dream come true. 
@@ -222,7 +222,7 @@ Take it step by step, and you will ___ one day.''',
       ClozeTest(
         id: 'senior_2',
         title: '真正的朋友',
-        level: 'senior',
+        level: 'grade10',
         translation: '真正的朋友是在你需要的时候陪在你身边的人。他们耐心地听你说话，当你难过的时候让你开心起来。友谊需要双方都付出努力。珍惜你的朋友。',
         passage: '''A true friend is someone who ___ there when you need them. 
 They listen to you ___. 
@@ -267,7 +267,7 @@ Treasure your ___!''',
       ClozeTest(
         id: 'senior_3',
         title: '如何管理时间',
-        level: 'senior',
+        level: 'grade11',
         translation: '时间是宝贵的资源。很多学生觉得没有足够的时间做完所有事情。一个好的方法是列一个清单。先做最重要的事情。不要拖延。合理利用时间。',
         passage: '''Time is a ___ resource. 
 Many students feel they don't have ___ time to do everything. 
@@ -311,7 +311,7 @@ Don't put ___ tomorrow what can be done today.''',
       ClozeTest(
         id: 'junior_4',
         title: '帮助他人',
-        level: 'junior',
+        level: 'grade8',
         translation: '玛丽是个善良的女孩。她总是帮助别人。上周她在路上发现了一个钱包。她把钱包交给了警察。警察找到了失主。失主非常感激。玛丽非常开心。',
         passage: '''Mary is a ___ girl.
 She always ___ others.
@@ -332,7 +332,7 @@ Mary was very happy.''',
       ClozeTest(
         id: 'junior_5',
         title: '健康饮食',
-        level: 'junior',
+        level: 'grade9',
         translation: '健康饮食对我们很重要。我们应该每天吃水果和蔬菜。不要吃太多垃圾食品。多喝水。多做运动。这样你就能保持健康。',
         passage: '''A healthy diet is very ___ for us.
 We should eat ___ and vegetables every day.
@@ -353,7 +353,7 @@ In this way, you can ___ healthy.''',
       ClozeTest(
         id: 'senior_4',
         title: '科技改变生活',
-        level: 'senior',
+        level: 'grade11',
         translation: '科技在我们的生活中扮演着重要的角色。智能手机改变了我们的交流方式。互联网让我们足不出户就能获取信息。但我们也需要明智地使用科技。',
         passage: '''Technology plays an ___ role in our lives.
 Smartphones have changed the way we ___.
@@ -369,7 +369,7 @@ But we also need to use technology ___.''',
       ClozeTest(
         id: 'senior_5',
         title: '成功的秘诀',
-        level: 'senior',
+        level: 'grade12',
         translation: '成功没有捷径。努力工作是关键。设定明确的目标，然后一步一步地实现它们。不要害怕失败。从错误中学习，继续前进。',
         passage: '''There is no ___ way to success.
 ___ work is the key to success.

@@ -20,7 +20,7 @@ class _MathPracticePageState extends State<MathPracticePage>
   bool? _isCorrect;
   int _correctCount = 0;
   int _totalCount = 0;
-  String _selectedLevel = 'junior';
+  String _selectedLevel = 'grade7';
   bool _showExplanation = false;
   late TabController _tabController;
 
@@ -28,7 +28,8 @@ class _MathPracticePageState extends State<MathPracticePage>
   void initState() {
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
-    _questions = MathBank.getJuniorQuestions()..shuffle(Random());
+    _questions = MathBank.getGrade7Questions()..shuffle(Random());
+    _restoreProgress();
   }
 
   @override
@@ -46,11 +47,39 @@ class _MathPracticePageState extends State<MathPracticePage>
       _showExplanation = false;
       _correctCount = 0;
       _totalCount = 0;
-      final source = level == 'junior'
-          ? MathBank.getJuniorQuestions()
-          : MathBank.getSeniorQuestions();
-      _questions = source..shuffle(Random());
+      _questions = _getQuestionsForLevel(level)..shuffle(Random());
     });
+  }
+
+  List<MathQuestion> _getQuestionsForLevel(String level) {
+    switch (level) {
+      case 'grade7': return MathBank.getGrade7Questions();
+      case 'grade8': return MathBank.getGrade8Questions();
+      case 'grade9': return MathBank.getGrade9Questions();
+      case 'grade10': return MathBank.getGrade10Questions();
+      case 'grade11': return MathBank.getGrade11Questions();
+      case 'grade12': return MathBank.getGrade12Questions();
+      default: return MathBank.getGrade7Questions();
+    }
+  }
+
+  Future<void> _restoreProgress() async {
+    final p = await StorageService.getMathProgress();
+    if (p != null && mounted) {
+      final level = p['level'] as String?;
+      final idx = p['index'] as int?;
+      if (level != null && idx != null && idx > 0) {
+        setState(() {
+          _selectedLevel = level;
+          _questions = _getQuestionsForLevel(level)..shuffle(Random());
+          _currentIndex = idx.clamp(0, _questions.length - 1);
+        });
+      }
+    }
+  }
+
+  Future<void> _saveProgress() async {
+    await StorageService.saveMathProgress(_selectedLevel, null, _currentIndex);
   }
 
   void _restart() {
@@ -105,6 +134,7 @@ class _MathPracticePageState extends State<MathPracticePage>
       _isCorrect = null;
       _showExplanation = false;
     });
+    _saveProgress();
   }
 
   void _showResult() {
@@ -186,25 +216,20 @@ class _MathPracticePageState extends State<MathPracticePage>
   }
 
   Widget _buildChapterSelect(ThemeData theme) {
-    final categories = _selectedLevel == 'junior'
-        ? MathBank.getJuniorCategories()
-        : MathBank.getSeniorCategories();
-
-    final levelQuestions = _selectedLevel == 'junior'
-        ? MathBank.getJuniorQuestions()
-        : MathBank.getSeniorQuestions();
+    final categories = MathBank.getCategoryList();
+    final levelQuestions = _getQuestionsForLevel(_selectedLevel);
 
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 16),
-          child: Row(
-            children: [
-              _buildLevelChip('junior', '📗 初中数学'),
-              const SizedBox(width: 8),
-              _buildLevelChip('senior', '📘 高中数学'),
-            ],
+          child: SizedBox(
+            height: 36,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: _buildGradeChips(),
+            ),
           ),
         ),
         Text(
@@ -253,28 +278,32 @@ class _MathPracticePageState extends State<MathPracticePage>
     );
   }
 
-  Widget _buildLevelChip(String level, String label) {
-    final isSelected = _selectedLevel == level;
-    return GestureDetector(
-      onTap: () => _switchLevel(level),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        decoration: BoxDecoration(
-          color: isSelected
-              ? Theme.of(context).colorScheme.primary
-              : Colors.grey[200],
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Text(
-          label,
-          style: TextStyle(
-            color: isSelected ? Colors.white : Colors.black87,
-            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-            fontSize: 14,
+  List<Widget> _buildGradeChips() {
+    const grades = {
+      'grade7': '初一', 'grade8': '初二', 'grade9': '初三',
+      'grade10': '高一', 'grade11': '高二', 'grade12': '高三',
+    };
+    return grades.entries.map((e) {
+      final isSelected = _selectedLevel == e.key;
+      return Padding(
+        padding: const EdgeInsets.only(right: 6),
+        child: GestureDetector(
+          onTap: () => _switchLevel(e.key),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            decoration: BoxDecoration(
+              color: isSelected ? Theme.of(context).colorScheme.primary : Colors.grey[200],
+              borderRadius: BorderRadius.circular(18),
+            ),
+            child: Text(e.value, style: TextStyle(
+              color: isSelected ? Colors.white : Colors.black87,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+              fontSize: 13,
+            )),
           ),
         ),
-      ),
-    );
+      );
+    }).toList();
   }
 
   Widget _buildPracticeMode(ThemeData theme) {

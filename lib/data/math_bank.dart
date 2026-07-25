@@ -2,7 +2,7 @@ import '../models/math_question.dart';
 
 class MathBank {
   // ===== 初中数学基础 =====
-  static List<MathQuestion> getJuniorQuestions() {
+  static List<MathQuestion> getGrade7Questions() {
     return [
       MathQuestion(
         question: '|-5| 等于多少？',
@@ -23,7 +23,7 @@ class MathBank {
         ],
         knowledgePoint: '绝对值的定义：一个数到原点的距离，结果永远是非负数',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -44,7 +44,7 @@ class MathBank {
         ],
         knowledgePoint: '有理数加法法则：异号相加，取绝对值较大的符号，用大绝对值减小绝对值',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -64,7 +64,7 @@ class MathBank {
         ],
         knowledgePoint: '有理数乘法：同号得正（负负得正），异号得负',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -89,7 +89,7 @@ class MathBank {
         ],
         knowledgePoint: '一元一次方程的解法：移项（变号）→ 合并同类项 → 系数化为1',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       MathQuestion(
@@ -108,7 +108,7 @@ class MathBank {
         ],
         knowledgePoint: '乘方运算：a² = a × a（a的平方等于a乘以自身）',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -129,7 +129,7 @@ class MathBank {
         ],
         knowledgePoint: '算术平方根：√a = b 的意思是 b² = a（b≥0）',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -151,7 +151,7 @@ class MathBank {
         ],
         knowledgePoint: '三角形内角和定理：任意三角形的三个内角之和等于180°',
         category: '几何',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -172,7 +172,7 @@ class MathBank {
         ],
         knowledgePoint: '圆的周长公式：C = 2πr = πd（其中 r=半径，d=直径）',
         category: '几何',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       MathQuestion(
@@ -196,7 +196,7 @@ class MathBank {
         ],
         knowledgePoint: '一元一次方程的解法：先移项变号，再系数化为1',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       MathQuestion(
@@ -217,7 +217,7 @@ class MathBank {
         ],
         knowledgePoint: '有理数加法：同号相加，符号不变，绝对值相加',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -242,7 +242,7 @@ class MathBank {
         ],
         knowledgePoint: '运算顺序：先括号 → 乘除（从左到右）→ 加减',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       MathQuestion(
@@ -263,7 +263,7 @@ class MathBank {
         ],
         knowledgePoint: '等腰三角形性质（两底角相等）+ 三角形内角和定理',
         category: '几何',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       MathQuestion(
@@ -285,7 +285,7 @@ class MathBank {
         ],
         knowledgePoint: '乘方运算：a³ = a × a × a',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -306,7 +306,7 @@ class MathBank {
         ],
         knowledgePoint: '三角形面积公式：S = ½ × 底 × 高',
         category: '几何',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -331,7 +331,7 @@ class MathBank {
         ],
         knowledgePoint: '小数的加法：小数点对齐，按位相加',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -351,7 +351,7 @@ class MathBank {
         ],
         knowledgePoint: '长方形面积公式：S = 长 × 宽',
         category: '几何',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -372,7 +372,7 @@ class MathBank {
         ],
         knowledgePoint: '分数化小数：分子 ÷ 分母',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       MathQuestion(
@@ -394,7 +394,7 @@ class MathBank {
         ],
         knowledgePoint: '等式性质：两边同时乘以相同的数，等式仍然成立',
         category: '代数',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       MathQuestion(
@@ -422,7 +422,7 @@ class MathBank {
         ],
         knowledgePoint: '勾股定理：直角三角形两直角边的平方和 = 斜边的平方（a²+b²=c²）',
         category: '几何',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 2,
       ),
       MathQuestion(
@@ -443,7 +443,7 @@ class MathBank {
         ],
         knowledgePoint: '正方形的周长公式：C = 4a（a为边长）',
         category: '几何',
-        level: 'junior',
+        level: 'grade7',
         difficulty: 1,
       ),
       // ===== 追加：有理数运算 =====
@@ -454,7 +454,7 @@ class MathBank {
         explanation: '异号相加，取绝对值大的符号，大减小',
         steps: ['第1步：-12和8异号', '第2步：|-12|=12，|8|=8，12更大取负', '第3步：12-8=4，所以(-12)+8 = -4'],
         knowledgePoint: '有理数加法',
-        category: '代数', level: 'junior', difficulty: 1,
+        category: '代数', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '计算：(-7) - (-3) = ?',
@@ -463,7 +463,7 @@ class MathBank {
         explanation: '减去负数等于加正数',
         steps: ['第1步：(-7)-(-3) = (-7)+3', '第2步：异号相加得负数', '第3步：7-3=4，结果为-4'],
         knowledgePoint: '有理数减法',
-        category: '代数', level: 'junior', difficulty: 2,
+        category: '代数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '计算：(-4) × 5 = ?',
@@ -472,7 +472,7 @@ class MathBank {
         explanation: '异号相乘得负',
         steps: ['第1步：-4和5异号', '第2步：异号相乘得负', '第3步：4×5=20，所以(-4)×5=-20'],
         knowledgePoint: '有理数乘法',
-        category: '代数', level: 'junior', difficulty: 1,
+        category: '代数', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '计算：0 ÷ (-5) = ?',
@@ -481,7 +481,7 @@ class MathBank {
         explanation: '0除以任何非零数都得0',
         steps: ['第1步：0除以任何不是0的数都得0', '第2步：0 ÷ (-5) = 0'],
         knowledgePoint: '0的除法',
-        category: '代数', level: 'junior', difficulty: 1,
+        category: '代数', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '计算：(-1)¹⁰⁰ = ?',
@@ -490,7 +490,7 @@ class MathBank {
         explanation: '(-1)的偶次方等于1',
         steps: ['第1步：100个(-1)相乘', '第2步：(-1)×(-1)=1', '第3步：100是偶数，结果为1'],
         knowledgePoint: '(-1)ⁿ的性质',
-        category: '代数', level: 'junior', difficulty: 2,
+        category: '代数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '计算：(-2) × 3 × (-1) = ?',
@@ -499,7 +499,7 @@ class MathBank {
         explanation: '两个负数相乘得正',
         steps: ['第1步：负数个数为偶数（2个）', '第2步：结果为正数', '第3步：2×3×1=6'],
         knowledgePoint: '多个有理数相乘',
-        category: '代数', level: 'junior', difficulty: 2,
+        category: '代数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '计算：|-8| - |3| = ?',
@@ -508,7 +508,7 @@ class MathBank {
         explanation: '先求绝对值再相减',
         steps: ['第1步：|-8|=8，|3|=3', '第2步：8-3=5'],
         knowledgePoint: '绝对值的计算',
-        category: '代数', level: 'junior', difficulty: 1,
+        category: '代数', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '比较大小：-5 ___ -3',
@@ -517,7 +517,7 @@ class MathBank {
         explanation: '负数绝对值越大反而越小',
         steps: ['第1步：在数轴上-5在-3左边', '第2步：越左边数越小', '第3步：所以 -5 < -3'],
         knowledgePoint: '负数比较',
-        category: '代数', level: 'junior', difficulty: 2,
+        category: '代数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '计算：2/3 + 1/6 = ?',
@@ -526,7 +526,7 @@ class MathBank {
         explanation: '先通分再相加',
         steps: ['第1步：通分，2/3=4/6', '第2步：4/6+1/6=5/6'],
         knowledgePoint: '分数加法',
-        category: '代数', level: 'junior', difficulty: 2,
+        category: '代数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '计算：0.3 × 0.02 = ?',
@@ -535,7 +535,7 @@ class MathBank {
         explanation: '小数乘法',
         steps: ['第1步：3×2=6', '第2步：共3位小数', '第3步：0.006'],
         knowledgePoint: '小数乘法',
-        category: '代数', level: 'junior', difficulty: 2,
+        category: '代数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '把0.2化成分数',
@@ -544,7 +544,7 @@ class MathBank {
         explanation: '0.2 = 2/10 = 1/5',
         steps: ['第1步：0.2=2/10', '第2步：约分得1/5'],
         knowledgePoint: '小数化分数',
-        category: '代数', level: 'junior', difficulty: 1,
+        category: '代数', level: 'grade7', difficulty: 1,
       ),
       // ===== 追加：方程与不等式 =====
       MathQuestion(
@@ -554,7 +554,7 @@ class MathBank {
         explanation: '两边加5',
         steps: ['第1步：x-5=12', '第2步：两边加5', '第3步：x=17'],
         knowledgePoint: '一元一次方程',
-        category: '代数', level: 'junior', difficulty: 1,
+        category: '代数', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '解方程：4x = 20，x = ?',
@@ -563,7 +563,7 @@ class MathBank {
         explanation: '两边除以4',
         steps: ['第1步：4x=20', '第2步：两边除以4', '第3步：x=5'],
         knowledgePoint: '一元一次方程',
-        category: '代数', level: 'junior', difficulty: 1,
+        category: '代数', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '解方程：2x + 5 = 13，x = ?',
@@ -572,7 +572,7 @@ class MathBank {
         explanation: '2x=8，x=4',
         steps: ['第1步：2x+5=13', '第2步：2x=8', '第3步：x=4'],
         knowledgePoint: '一元一次方程',
-        category: '代数', level: 'junior', difficulty: 2,
+        category: '代数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '解方程：3(x - 2) = 9，x = ?',
@@ -581,7 +581,7 @@ class MathBank {
         explanation: '两边除以3得x-2=3',
         steps: ['第1步：3(x-2)=9', '第2步：x-2=3', '第3步：x=5'],
         knowledgePoint: '含括号方程',
-        category: '代数', level: 'junior', difficulty: 2,
+        category: '代数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '解方程：2x - 1 = 5x + 8，x = ?',
@@ -590,7 +590,7 @@ class MathBank {
         explanation: '移项：2x-5x=8+1',
         steps: ['第1步：移项得2x-5x=8+1', '第2步：-3x=9', '第3步：x=-3'],
         knowledgePoint: '移项解方程',
-        category: '代数', level: 'junior', difficulty: 3,
+        category: '代数', level: 'grade7', difficulty: 3,
       ),
       MathQuestion(
         question: '解不等式：x + 3 > 7',
@@ -599,7 +599,7 @@ class MathBank {
         explanation: '两边减3',
         steps: ['第1步：x+3>7', '第2步：x>4'],
         knowledgePoint: '一元一次不等式',
-        category: '代数', level: 'junior', difficulty: 2,
+        category: '代数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '解不等式：-2x ≤ 6',
@@ -608,7 +608,7 @@ class MathBank {
         explanation: '除以负数要变号',
         steps: ['第1步：-2x≤6', '第2步：两边除以-2', '第3步：x≥-3'],
         knowledgePoint: '含负系数不等式',
-        category: '代数', level: 'junior', difficulty: 3,
+        category: '代数', level: 'grade7', difficulty: 3,
       ),
       MathQuestion(
         question: '不等式组 {x>1, x<4} 的解集是？',
@@ -617,7 +617,7 @@ class MathBank {
         explanation: '取公共部分',
         steps: ['第1步：x>1是1右边', '第2步：x<4是4左边', '第3步：公共部分1<x<4'],
         knowledgePoint: '不等式组',
-        category: '代数', level: 'junior', difficulty: 3,
+        category: '代数', level: 'grade7', difficulty: 3,
       ),
       // ===== 追加：几何 =====
       MathQuestion(
@@ -627,7 +627,7 @@ class MathBank {
         explanation: '两锐角互余',
         steps: ['第1步：直角三角形两锐角和=90°', '第2步：90°-35°=55°'],
         knowledgePoint: '直角三角形',
-        category: '几何', level: 'junior', difficulty: 2,
+        category: '几何', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '等腰三角形底角40°，顶角是？',
@@ -636,7 +636,7 @@ class MathBank {
         explanation: '两底角相等',
         steps: ['第1步：两底角各40°', '第2步：和=80°', '第3步：顶角=180°-80°=100°'],
         knowledgePoint: '等腰三角形',
-        category: '几何', level: 'junior', difficulty: 2,
+        category: '几何', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '平行四边形对角线___',
@@ -645,7 +645,7 @@ class MathBank {
         explanation: '平行四边形对角线互相平分',
         steps: ['第1步：一般平行四边形对角线互相平分', '第2步：矩形对角线相等', '第3步：菱形对角线垂直'],
         knowledgePoint: '平行四边形性质',
-        category: '几何', level: 'junior', difficulty: 2,
+        category: '几何', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '圆的面积公式是？',
@@ -654,7 +654,7 @@ class MathBank {
         explanation: 'S=πr²',
         steps: ['第1步：圆的面积公式 S=πr²', '第2步：区分周长C=2πr'],
         knowledgePoint: '圆的面积',
-        category: '几何', level: 'junior', difficulty: 2,
+        category: '几何', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '半径3cm的圆面积约是？（π≈3.14）',
@@ -663,7 +663,7 @@ class MathBank {
         explanation: 'S=3.14×9=28.26',
         steps: ['第1步：S=πr²', '第2步：3.14×3²', '第3步：=3.14×9=28.26'],
         knowledgePoint: '圆的面积计算',
-        category: '几何', level: 'junior', difficulty: 2,
+        category: '几何', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '长方体长4cm、宽3cm、高2cm，体积是？',
@@ -672,7 +672,7 @@ class MathBank {
         explanation: 'V=长×宽×高',
         steps: ['第1步：V=4×3×2', '第2步：=24cm³'],
         knowledgePoint: '长方体体积',
-        category: '几何', level: 'junior', difficulty: 2,
+        category: '几何', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '等边三角形每个内角是？',
@@ -681,7 +681,7 @@ class MathBank {
         explanation: '三个角相等',
         steps: ['第1步：等边三角形三个角相等', '第2步：180°÷3=60°'],
         knowledgePoint: '等边三角形',
-        category: '几何', level: 'junior', difficulty: 1,
+        category: '几何', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '多边形内角和540°，它是几边形？',
@@ -690,7 +690,7 @@ class MathBank {
         explanation: '(n-2)×180°=540°',
         steps: ['第1步：(n-2)×180°=540°', '第2步：n-2=3', '第3步：n=5，五边形'],
         knowledgePoint: '多边形内角和',
-        category: '几何', level: 'junior', difficulty: 3,
+        category: '几何', level: 'grade7', difficulty: 3,
       ),
       MathQuestion(
         question: '直径12cm的圆周长是？（π≈3.14）',
@@ -699,7 +699,7 @@ class MathBank {
         explanation: 'C=πd',
         steps: ['第1步：C=πd', '第2步：=3.14×12=37.68cm'],
         knowledgePoint: '圆的周长',
-        category: '几何', level: 'junior', difficulty: 2,
+        category: '几何', level: 'grade7', difficulty: 2,
       ),
       // ===== 追加：函数 =====
       MathQuestion(
@@ -709,7 +709,7 @@ class MathBank {
         explanation: 'x正y负在第四象限',
         steps: ['第1步：x=3>0，y=-2<0', '第2步：x正y负→第四象限'],
         knowledgePoint: '象限判断',
-        category: '函数', level: 'junior', difficulty: 2,
+        category: '函数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: 'y=2x+1的斜率k=？',
@@ -718,7 +718,7 @@ class MathBank {
         explanation: 'y=kx+b中k是斜率',
         steps: ['第1步：y=2x+1对比y=kx+b', '第2步：k=2'],
         knowledgePoint: '一次函数斜率',
-        category: '函数', level: 'junior', difficulty: 2,
+        category: '函数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: 'y=-3x+6与x轴交点是？',
@@ -727,7 +727,7 @@ class MathBank {
         explanation: 'y=0求x',
         steps: ['第1步：y=0时-3x+6=0', '第2步：3x=6', '第3步：x=2，交点为(2,0)'],
         knowledgePoint: '一次函数与x轴交点',
-        category: '函数', level: 'junior', difficulty: 3,
+        category: '函数', level: 'grade7', difficulty: 3,
       ),
       MathQuestion(
         question: 'y=2x的图像经过哪些象限？',
@@ -736,7 +736,7 @@ class MathBank {
         explanation: 'k>0过一三象限',
         steps: ['第1步：k=2>0', '第2步：过第一和第三象限'],
         knowledgePoint: '正比例函数图像',
-        category: '函数', level: 'junior', difficulty: 2,
+        category: '函数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: 'y与x成正比，x=2时y=6，比例系数k=？',
@@ -745,7 +745,7 @@ class MathBank {
         explanation: 'y=kx代入',
         steps: ['第1步：y=kx', '第2步：6=k×2', '第3步：k=3'],
         knowledgePoint: '正比例关系',
-        category: '函数', level: 'junior', difficulty: 2,
+        category: '函数', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: 'y=6/x的图像在哪些象限？',
@@ -754,7 +754,7 @@ class MathBank {
         explanation: 'k>0在一三象限',
         steps: ['第1步：k=6>0', '第2步：反比例函数k>0过一三象限'],
         knowledgePoint: '反比例函数',
-        category: '函数', level: 'junior', difficulty: 3,
+        category: '函数', level: 'grade7', difficulty: 3,
       ),
       // ===== 追加：应用题 =====
       MathQuestion(
@@ -764,7 +764,7 @@ class MathBank {
         explanation: '20-15=5',
         steps: ['第1步：5×3=15元', '第2步：20-15=5元'],
         knowledgePoint: '简单应用题',
-        category: '应用题', level: 'junior', difficulty: 1,
+        category: '应用题', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '甲乙相向而行相距120km，甲速40km/h，乙速20km/h，几小时后相遇？',
@@ -773,7 +773,7 @@ class MathBank {
         explanation: '相遇时间=距离÷速度和',
         steps: ['第1步：速度和=40+20=60km/h', '第2步：120÷60=2h'],
         knowledgePoint: '相遇问题',
-        category: '应用题', level: 'junior', difficulty: 3,
+        category: '应用题', level: 'grade7', difficulty: 3,
       ),
       MathQuestion(
         question: '原价200元打8折后多少元？',
@@ -782,7 +782,7 @@ class MathBank {
         explanation: '8折=80%',
         steps: ['第1步：200×80%', '第2步：=200×0.8=160元'],
         knowledgePoint: '折扣问题',
-        category: '应用题', level: 'junior', difficulty: 1,
+        category: '应用题', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '水箱可装60L，已装15L，还要装多少？',
@@ -791,7 +791,7 @@ class MathBank {
         explanation: '60-15=45',
         steps: ['第1步：60L总量', '第2步：60-15=45L'],
         knowledgePoint: '简单减法',
-        category: '应用题', level: 'junior', difficulty: 1,
+        category: '应用题', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '每小时生产50个，8小时生产多少个？',
@@ -800,7 +800,7 @@ class MathBank {
         explanation: '50×8=400',
         steps: ['第1步：50×8=400个'],
         knowledgePoint: '工作效率',
-        category: '应用题', level: 'junior', difficulty: 1,
+        category: '应用题', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '40人班级女生占45%，女生多少人？',
@@ -809,7 +809,7 @@ class MathBank {
         explanation: '40×45%=18',
         steps: ['第1步：40×45%', '第2步：=40×0.45=18人'],
         knowledgePoint: '百分比',
-        category: '应用题', level: 'junior', difficulty: 2,
+        category: '应用题', level: 'grade7', difficulty: 2,
       ),
       // ===== 追加：统计 =====
       MathQuestion(
@@ -819,7 +819,7 @@ class MathBank {
         explanation: '出现次数最多的数',
         steps: ['第1步：5出现2次最多', '第2步：众数为5'],
         knowledgePoint: '众数',
-        category: '统计', level: 'junior', difficulty: 1,
+        category: '统计', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '数据1,3,4,6,8,8的中位数是？',
@@ -828,7 +828,7 @@ class MathBank {
         explanation: '排序后中间两数的平均数',
         steps: ['第1步：中间两个是4和6', '第2步：(4+6)÷2=5'],
         knowledgePoint: '中位数',
-        category: '统计', level: 'junior', difficulty: 2,
+        category: '统计', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
         question: '数据3,5,7,9,11的平均数是？',
@@ -837,7 +837,7 @@ class MathBank {
         explanation: '和÷个数',
         steps: ['第1步：和=3+5+7+9+11=35', '第2步：35÷5=7'],
         knowledgePoint: '平均数',
-        category: '统计', level: 'junior', difficulty: 1,
+        category: '统计', level: 'grade7', difficulty: 1,
       ),
       MathQuestion(
         question: '2红球3白球，摸到红球的概率是？',
@@ -846,13 +846,13 @@ class MathBank {
         explanation: '2÷5=2/5',
         steps: ['第1步：总球=5', '第2步：红球=2', '第3步：概率=2/5'],
         knowledgePoint: '概率计算',
-        category: '统计', level: 'junior', difficulty: 2,
+        category: '统计', level: 'grade7', difficulty: 2,
       ),
     ];
   }
 
   // ===== 高中数学基础 =====
-  static List<MathQuestion> getSeniorQuestions() {
+  static List<MathQuestion> getGrade10Questions() {
     return [
       MathQuestion(
         question: '集合 A = {1, 2, 3}，B = {2, 3, 4}，则 A∪B = ?',
@@ -873,7 +873,7 @@ class MathBank {
         ],
         knowledgePoint: '并集：由所有属于A或属于B的元素组成的集合（重复只取一次）',
         category: '集合',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 1,
       ),
       MathQuestion(
@@ -895,7 +895,7 @@ class MathBank {
         ],
         knowledgePoint: '交集：由同时属于A和B的元素组成的集合',
         category: '集合',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 1,
       ),
       MathQuestion(
@@ -917,7 +917,7 @@ class MathBank {
         ],
         knowledgePoint: '函数值的计算：将自变量x代入函数解析式求值',
         category: '函数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 1,
       ),
       MathQuestion(
@@ -939,7 +939,7 @@ class MathBank {
         ],
         knowledgePoint: '等差数列的公差：d = aₙ - aₙ₋₁（后一项减前一项的差是常数）',
         category: '数列',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       MathQuestion(
@@ -962,7 +962,7 @@ class MathBank {
         ],
         knowledgePoint: '对数的定义：logₐN = x 等价于 aˣ = N',
         category: '函数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       MathQuestion(
@@ -983,7 +983,7 @@ class MathBank {
         ],
         knowledgePoint: '特殊角的三角函数值：sin90°=1',
         category: '三角函数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 1,
       ),
       MathQuestion(
@@ -1002,7 +1002,7 @@ class MathBank {
         ],
         knowledgePoint: '特殊角的三角函数值：cos0°=1',
         category: '三角函数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 1,
       ),
       MathQuestion(
@@ -1025,7 +1025,7 @@ class MathBank {
         ],
         knowledgePoint: '二次函数 f(x)=ax²+bx+c 的对称轴：x = -b/(2a)',
         category: '函数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       MathQuestion(
@@ -1049,7 +1049,7 @@ class MathBank {
         ],
         knowledgePoint: '数列通项公式：用n表示第n项取值的公式',
         category: '数列',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       MathQuestion(
@@ -1074,7 +1074,7 @@ class MathBank {
         ],
         knowledgePoint: '零指数幂：a⁰ = 1（a ≠ 0）',
         category: '代数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 1,
       ),
       MathQuestion(
@@ -1095,7 +1095,7 @@ class MathBank {
         ],
         knowledgePoint: '绝对值不等式：|x| < a 的解集为 -a < x < a',
         category: '代数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       MathQuestion(
@@ -1116,7 +1116,7 @@ class MathBank {
         ],
         knowledgePoint: '向量加法：对应坐标分别相加',
         category: '向量',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       MathQuestion(
@@ -1137,7 +1137,7 @@ class MathBank {
         ],
         knowledgePoint: '分式函数的定义域：分母不为0',
         category: '函数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 1,
       ),
       MathQuestion(
@@ -1159,7 +1159,7 @@ class MathBank {
         ],
         knowledgePoint: '特殊角的三角函数值：tan45°=1',
         category: '三角函数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       MathQuestion(
@@ -1182,7 +1182,7 @@ class MathBank {
         ],
         knowledgePoint: '等比数列通项公式：aₙ = a₁·qⁿ⁻¹',
         category: '数列',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       MathQuestion(
@@ -1205,7 +1205,7 @@ class MathBank {
         ],
         knowledgePoint: '圆的标准方程：(x-a)²+(y-b)²=r²，圆心(a,b)，半径r',
         category: '解析几何',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       MathQuestion(
@@ -1227,7 +1227,7 @@ class MathBank {
         ],
         knowledgePoint: '互斥事件的概率加法公式：P(A∪B) = P(A) + P(B)',
         category: '概率',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       MathQuestion(
@@ -1249,7 +1249,7 @@ class MathBank {
         ],
         knowledgePoint: '基本求导公式：(xⁿ)′ = nxⁿ⁻¹',
         category: '导数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
       MathQuestion(
@@ -1270,7 +1270,7 @@ class MathBank {
         ],
         knowledgePoint: '指数函数的定点：a⁰=1，所以图像恒过(0,1)',
         category: '函数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 2,
       ),
       MathQuestion(
@@ -1294,7 +1294,7 @@ class MathBank {
         ],
         knowledgePoint: '基本积分公式：∫xⁿ dx = xⁿ⁺¹/(n+1) + C',
         category: '导数',
-        level: 'senior',
+        level: 'grade10',
         difficulty: 3,
       ),
       // ===== 追加：集合与逻辑 =====
@@ -1304,7 +1304,7 @@ class MathBank {
         correctIndex: 2,
         explanation: '并集取所有元素',
         steps: ['第1步：A∪B表示合并', '第2步：{1,3,5,7}'],
-        knowledgePoint: '并集运算', category: '集合', level: 'senior', difficulty: 1,
+        knowledgePoint: '并集运算', category: '集合', level: 'grade10', difficulty: 1,
       ),
       MathQuestion(
         question: '集合 A={x|x≤3}，B={x|x>1}，A∩B=？',
@@ -1312,7 +1312,7 @@ class MathBank {
         correctIndex: 2,
         explanation: '取公共部分',
         steps: ['第1步：A是≤3，B是>1', '第2步：公共部分1<x≤3'],
-        knowledgePoint: '区间交集', category: '集合', level: 'senior', difficulty: 2,
+        knowledgePoint: '区间交集', category: '集合', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '设全集U={1,2,3,4,5}，A={2,3}，则∁ᵤA=？',
@@ -1320,7 +1320,7 @@ class MathBank {
         correctIndex: 0,
         explanation: '补集是U中不在A的元素',
         steps: ['第1步：U中有1,2,3,4,5', '第2步：去掉A的2,3', '第3步：剩下1,4,5'],
-        knowledgePoint: '补集', category: '集合', level: 'senior', difficulty: 2,
+        knowledgePoint: '补集', category: '集合', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '"x>2"是"x>1"的什么条件？',
@@ -1328,7 +1328,7 @@ class MathBank {
         correctIndex: 0,
         explanation: 'x>2能推出x>1，但反过来不行',
         steps: ['第1步：x>2 ⇒ x>1，充分', '第2步：x>1 ⇏ x>2，不必要', '第3步：充分不必要条件'],
-        knowledgePoint: '充要条件', category: '集合', level: 'senior', difficulty: 3,
+        knowledgePoint: '充要条件', category: '集合', level: 'grade10', difficulty: 3,
       ),
       // ===== 追加：函数 =====
       MathQuestion(
@@ -1337,7 +1337,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '根号内≥0',
         steps: ['第1步：x-2≥0', '第2步：x≥2'],
-        knowledgePoint: '函数定义域', category: '函数', level: 'senior', difficulty: 2,
+        knowledgePoint: '函数定义域', category: '函数', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: 'f(x)=1/(x-3)的定义域是？',
@@ -1345,7 +1345,7 @@ class MathBank {
         correctIndex: 2,
         explanation: '分母不为0',
         steps: ['第1步：x-3≠0', '第2步：x≠3'],
-        knowledgePoint: '分式定义域', category: '函数', level: 'senior', difficulty: 1,
+        knowledgePoint: '分式定义域', category: '函数', level: 'grade10', difficulty: 1,
       ),
       MathQuestion(
         question: 'f(x)=x²-2x+3的最小值是？',
@@ -1353,7 +1353,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '顶点公式',
         steps: ['第1步：a=1>0，开口向上有最小值', '第2步：x=-b/(2a)=1', '第3步：f(1)=1-2+3=2'],
-        knowledgePoint: '二次函数最值', category: '函数', level: 'senior', difficulty: 3,
+        knowledgePoint: '二次函数最值', category: '函数', level: 'grade10', difficulty: 3,
       ),
       MathQuestion(
         question: 'f(x)=2x在R上是？',
@@ -1361,7 +1361,7 @@ class MathBank {
         correctIndex: 0,
         explanation: 'k>0单调递增',
         steps: ['第1步：f(x)=2x，k=2>0', '第2步：在R上是增函数'],
-        knowledgePoint: '函数单调性', category: '函数', level: 'senior', difficulty: 2,
+        knowledgePoint: '函数单调性', category: '函数', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: 'f(x)=x²是？',
@@ -1369,7 +1369,7 @@ class MathBank {
         correctIndex: 1,
         explanation: 'f(-x)=(-x)²=x²=f(x)',
         steps: ['第1步：f(-x)=(-x)²=x²', '第2步：f(-x)=f(x)', '第3步：偶函数'],
-        knowledgePoint: '函数奇偶性', category: '函数', level: 'senior', difficulty: 2,
+        knowledgePoint: '函数奇偶性', category: '函数', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: 'f(x)=x³是？',
@@ -1377,7 +1377,7 @@ class MathBank {
         correctIndex: 0,
         explanation: 'f(-x)=-x³=-f(x)',
         steps: ['第1步：f(-x)=(-x)³=-x³', '第2步：f(-x)=-f(x)', '第3步：奇函数'],
-        knowledgePoint: '奇偶性判断', category: '函数', level: 'senior', difficulty: 2,
+        knowledgePoint: '奇偶性判断', category: '函数', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '函数y=2ˣ的值域是？',
@@ -1385,7 +1385,7 @@ class MathBank {
         correctIndex: 0,
         explanation: '指数函数值域为正数',
         steps: ['第1步：y=2ˣ是指数函数', '第2步：任何数的正数次方>0', '第3步：值域(0,+∞)'],
-        knowledgePoint: '指数函数值域', category: '函数', level: 'senior', difficulty: 2,
+        knowledgePoint: '指数函数值域', category: '函数', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: 'log₃9 = ?',
@@ -1393,7 +1393,7 @@ class MathBank {
         correctIndex: 0,
         explanation: '3²=9',
         steps: ['第1步：3²=9', '第2步：log₃9=2'],
-        knowledgePoint: '对数计算', category: '函数', level: 'senior', difficulty: 1,
+        knowledgePoint: '对数计算', category: '函数', level: 'grade10', difficulty: 1,
       ),
       MathQuestion(
         question: 'lg100 = ?',
@@ -1401,7 +1401,7 @@ class MathBank {
         correctIndex: 1,
         explanation: 'lg100=log₁₀100=2',
         steps: ['第1步：lg是以10为底', '第2步：10²=100', '第3步：lg100=2'],
-        knowledgePoint: '常用对数', category: '函数', level: 'senior', difficulty: 2,
+        knowledgePoint: '常用对数', category: '函数', level: 'grade10', difficulty: 2,
       ),
       // ===== 追加：数列 =====
       MathQuestion(
@@ -1410,7 +1410,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '7-3=4',
         steps: ['第1步：7-3=4', '第2步：验证11-7=4，公差为4'],
-        knowledgePoint: '等差数列公差', category: '数列', level: 'senior', difficulty: 1,
+        knowledgePoint: '等差数列公差', category: '数列', level: 'grade10', difficulty: 1,
       ),
       MathQuestion(
         question: '等差数列3,7,11,15,...的第10项是？',
@@ -1418,7 +1418,7 @@ class MathBank {
         correctIndex: 1,
         explanation: 'aₙ=3+(n-1)×4',
         steps: ['第1步：a₁=3，d=4', '第2步：a₁₀=3+9×4', '第3步：=3+36=39'],
-        knowledgePoint: '等差数列通项', category: '数列', level: 'senior', difficulty: 2,
+        knowledgePoint: '等差数列通项', category: '数列', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '等差数列1+2+3+...+100的和是？',
@@ -1426,7 +1426,7 @@ class MathBank {
         correctIndex: 2,
         explanation: 'Sₙ=n(a₁+aₙ)/2',
         steps: ['第1步：n=100，a₁=1，a₁₀₀=100', '第2步：S=100×(1+100)/2', '第3步：=100×101/2=5050'],
-        knowledgePoint: '等差数列求和', category: '数列', level: 'senior', difficulty: 3,
+        knowledgePoint: '等差数列求和', category: '数列', level: 'grade10', difficulty: 3,
       ),
       MathQuestion(
         question: '等比数列3,6,12,24,...的公比是？',
@@ -1434,7 +1434,7 @@ class MathBank {
         correctIndex: 0,
         explanation: '6÷3=2',
         steps: ['第1步：6÷3=2', '第2步：验证12÷6=2，公比q=2'],
-        knowledgePoint: '等比数列公比', category: '数列', level: 'senior', difficulty: 1,
+        knowledgePoint: '等比数列公比', category: '数列', level: 'grade10', difficulty: 1,
       ),
       MathQuestion(
         question: '等比数列3,6,12,24,...的第6项是？',
@@ -1442,7 +1442,7 @@ class MathBank {
         correctIndex: 2,
         explanation: 'aₙ=3×2ⁿ⁻¹',
         steps: ['第1步：a₁=3，q=2', '第2步：a₆=3×2⁵', '第3步：=3×32=96'],
-        knowledgePoint: '等比数列通项', category: '数列', level: 'senior', difficulty: 2,
+        knowledgePoint: '等比数列通项', category: '数列', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '数列1,3,6,10,15...的第6项是？',
@@ -1450,7 +1450,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '每次增加2,3,4,5,6...',
         steps: ['第1步：差为2,3,4,5,...', '第2步：第6项=15+6=21'],
-        knowledgePoint: '数列找规律', category: '数列', level: 'senior', difficulty: 2,
+        knowledgePoint: '数列找规律', category: '数列', level: 'grade10', difficulty: 2,
       ),
       // ===== 追加：三角 =====
       MathQuestion(
@@ -1459,7 +1459,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '特殊角正弦值',
         steps: ['第1步：记住sin30°=1/2'],
-        knowledgePoint: '特殊角三角函数', category: '三角函数', level: 'senior', difficulty: 1,
+        knowledgePoint: '特殊角三角函数', category: '三角函数', level: 'grade10', difficulty: 1,
       ),
       MathQuestion(
         question: 'cos60° = ?',
@@ -1467,7 +1467,7 @@ class MathBank {
         correctIndex: 1,
         explanation: 'cos60°=1/2',
         steps: ['第1步：cos60°=1/2'],
-        knowledgePoint: '特殊角余弦', category: '三角函数', level: 'senior', difficulty: 1,
+        knowledgePoint: '特殊角余弦', category: '三角函数', level: 'grade10', difficulty: 1,
       ),
       MathQuestion(
         question: 'sin²θ + cos²θ = ?',
@@ -1475,7 +1475,7 @@ class MathBank {
         correctIndex: 2,
         explanation: '同角三角函数基本关系',
         steps: ['第1步：sin²θ+cos²θ=1', '第2步：这是三角函数基本恒等式'],
-        knowledgePoint: '同角三角函数关系', category: '三角函数', level: 'senior', difficulty: 2,
+        knowledgePoint: '同角三角函数关系', category: '三角函数', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: 'sin(180°-α) = ?',
@@ -1483,7 +1483,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '互补角的正弦相等',
         steps: ['第1步：sin(180°-α)=sinα', '第2步：诱导公式'],
-        knowledgePoint: '诱导公式', category: '三角函数', level: 'senior', difficulty: 3,
+        knowledgePoint: '诱导公式', category: '三角函数', level: 'grade10', difficulty: 3,
       ),
       MathQuestion(
         question: 'cos(180°-α) = ?',
@@ -1491,7 +1491,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '互补角的余弦互为相反数',
         steps: ['第1步：cos(180°-α)=-cosα'],
-        knowledgePoint: '诱导公式', category: '三角函数', level: 'senior', difficulty: 3,
+        knowledgePoint: '诱导公式', category: '三角函数', level: 'grade10', difficulty: 3,
       ),
       // ===== 追加：向量 =====
       MathQuestion(
@@ -1500,7 +1500,7 @@ class MathBank {
         correctIndex: 0,
         explanation: '对应坐标相加',
         steps: ['第1步：横坐标3+1=4', '第2步：纵坐标-2+4=2', '第3步：a+b=(4,2)'],
-        knowledgePoint: '向量加法', category: '向量', level: 'senior', difficulty: 2,
+        knowledgePoint: '向量加法', category: '向量', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '向量a=(2,3)，b=(-1,2)，a-b=？',
@@ -1508,7 +1508,7 @@ class MathBank {
         correctIndex: 0,
         explanation: '对应坐标相减',
         steps: ['第1步：横坐标2-(-1)=3', '第2步：纵坐标3-2=1', '第3步：a-b=(3,1)'],
-        knowledgePoint: '向量减法', category: '向量', level: 'senior', difficulty: 2,
+        knowledgePoint: '向量减法', category: '向量', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '向量a=(2,3)的长度|a|=？',
@@ -1516,7 +1516,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '|a|=√(x²+y²)',
         steps: ['第1步：|a|=√(2²+3²)', '第2步：=√(4+9)=√13'],
-        knowledgePoint: '向量模长', category: '向量', level: 'senior', difficulty: 2,
+        knowledgePoint: '向量模长', category: '向量', level: 'grade10', difficulty: 2,
       ),
       // ===== 追加：不等式 =====
       MathQuestion(
@@ -1525,7 +1525,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '因式分解(x-2)(x-3)<0',
         steps: ['第1步：(x-2)(x-3)<0', '第2步：两根为2和3', '第3步：a>0开口向上，取中间', '第4步：2<x<3'],
-        knowledgePoint: '一元二次不等式', category: '代数', level: 'senior', difficulty: 3,
+        knowledgePoint: '一元二次不等式', category: '代数', level: 'grade10', difficulty: 3,
       ),
       MathQuestion(
         question: '解不等式x²-4≥0',
@@ -1533,7 +1533,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '(x-2)(x+2)≥0',
         steps: ['第1步：(x-2)(x+2)≥0', '第2步：两根-2和2', '第3步：a>0开口向上', '第4步：x≤-2或x≥2'],
-        knowledgePoint: '一元二次不等式', category: '代数', level: 'senior', difficulty: 3,
+        knowledgePoint: '一元二次不等式', category: '代数', level: 'grade10', difficulty: 3,
       ),
       MathQuestion(
         question: '已知a>b，则下列正确的是？',
@@ -1541,7 +1541,7 @@ class MathBank {
         correctIndex: 2,
         explanation: '不等号两边同加/减/乘正数不变',
         steps: ['第1步：a>b两边同除以2', '第2步：a/2>b/2'],
-        knowledgePoint: '不等式性质', category: '代数', level: 'senior', difficulty: 2,
+        knowledgePoint: '不等式性质', category: '代数', level: 'grade10', difficulty: 2,
       ),
       // ===== 追加：概率统计 =====
       MathQuestion(
@@ -1550,7 +1550,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '2÷5=2/5',
         steps: ['第1步：共5人', '第2步：女生2人', '第3步：概率=2/5'],
-        knowledgePoint: '古典概型', category: '概率', level: 'senior', difficulty: 1,
+        knowledgePoint: '古典概型', category: '概率', level: 'grade10', difficulty: 1,
       ),
       MathQuestion(
         question: '抛两枚硬币，都正面朝上的概率是？',
@@ -1558,7 +1558,7 @@ class MathBank {
         correctIndex: 2,
         explanation: '(1/2)×(1/2)=1/4',
         steps: ['第1步：一枚正面概率1/2', '第2步：两枚都正面=1/2×1/2=1/4'],
-        knowledgePoint: '相互独立事件', category: '概率', level: 'senior', difficulty: 2,
+        knowledgePoint: '相互独立事件', category: '概率', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '数据2,3,5,7,8的方差是？',
@@ -1566,7 +1566,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '方差=各数与平均数差的平方的平均数',
         steps: ['第1步：平均数=(2+3+5+7+8)/5=5', '第2步：方差=(9+4+0+4+9)/5=26/5=5.2'],
-        knowledgePoint: '方差计算', category: '统计', level: 'senior', difficulty: 3,
+        knowledgePoint: '方差计算', category: '统计', level: 'grade10', difficulty: 3,
       ),
       // ===== 追加：解析几何 =====
       MathQuestion(
@@ -1575,7 +1575,7 @@ class MathBank {
         correctIndex: 0,
         explanation: '点斜式y-y₀=k(x-x₀)',
         steps: ['第1步：y-2=3(x-1)', '第2步：y=3x-3+2', '第3步：y=3x-1'],
-        knowledgePoint: '直线方程', category: '解析几何', level: 'senior', difficulty: 3,
+        knowledgePoint: '直线方程', category: '解析几何', level: 'grade10', difficulty: 3,
       ),
       MathQuestion(
         question: '直线l₁:y=2x+1与l₂:y=2x-3的位置关系是？',
@@ -1583,7 +1583,7 @@ class MathBank {
         correctIndex: 1,
         explanation: '斜率相等，截距不同',
         steps: ['第1步：k₁=2，k₂=2，斜率相等', '第2步：b₁=1，b₂=-3，截距不同', '第3步：平行'],
-        knowledgePoint: '直线位置关系', category: '解析几何', level: 'senior', difficulty: 2,
+        knowledgePoint: '直线位置关系', category: '解析几何', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '点(3,4)到原点的距离是？',
@@ -1591,7 +1591,7 @@ class MathBank {
         correctIndex: 0,
         explanation: 'd=√(3²+4²)=5',
         steps: ['第1步：d=√(x²+y²)', '第2步：=√(9+16)', '第3步：=√25=5'],
-        knowledgePoint: '两点距离公式', category: '解析几何', level: 'senior', difficulty: 2,
+        knowledgePoint: '两点距离公式', category: '解析几何', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '圆心在(2,3)，半径4的圆方程是？',
@@ -1599,7 +1599,7 @@ class MathBank {
         correctIndex: 2,
         explanation: '(x-a)²+(y-b)²=r²',
         steps: ['第1步：圆心(a,b)=(2,3)', '第2步：半径r=4，r²=16', '第3步：(x-2)²+(y-3)²=16'],
-        knowledgePoint: '圆的标准方程', category: '解析几何', level: 'senior', difficulty: 2,
+        knowledgePoint: '圆的标准方程', category: '解析几何', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '椭圆x²/25+y²/16=1的长轴长是？',
@@ -1607,7 +1607,7 @@ class MathBank {
         correctIndex: 2,
         explanation: 'a²=25，a=5，长轴=2a=10',
         steps: ['第1步：a²=25，a=5', '第2步：长轴=2a=10'],
-        knowledgePoint: '椭圆性质', category: '解析几何', level: 'senior', difficulty: 3,
+        knowledgePoint: '椭圆性质', category: '解析几何', level: 'grade10', difficulty: 3,
       ),
       // ===== 追加：导数 =====
       MathQuestion(
@@ -1616,7 +1616,7 @@ class MathBank {
         correctIndex: 0,
         explanation: '(xⁿ)′=nxⁿ⁻¹',
         steps: ['第1步：(x⁴)′=4x³'],
-        knowledgePoint: '幂函数求导', category: '导数', level: 'senior', difficulty: 2,
+        knowledgePoint: '幂函数求导', category: '导数', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: 'f(x)=5的导数是？',
@@ -1624,7 +1624,7 @@ class MathBank {
         correctIndex: 2,
         explanation: '常数的导数为0',
         steps: ['第1步：常数求导为0', '第2步：f\'(x)=0'],
-        knowledgePoint: '常数求导', category: '导数', level: 'senior', difficulty: 1,
+        knowledgePoint: '常数求导', category: '导数', level: 'grade10', difficulty: 1,
       ),
       MathQuestion(
         question: 'f(x)=sin x的导数是？',
@@ -1632,7 +1632,7 @@ class MathBank {
         correctIndex: 1,
         explanation: 'sin x的导数是cos x',
         steps: ['第1步：(sin x)′=cos x'],
-        knowledgePoint: '基本求导公式', category: '导数', level: 'senior', difficulty: 2,
+        knowledgePoint: '基本求导公式', category: '导数', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: 'f(x)=eˣ的导数是？',
@@ -1640,7 +1640,7 @@ class MathBank {
         correctIndex: 0,
         explanation: 'eˣ的导数是它本身',
         steps: ['第1步：(eˣ)′=eˣ'],
-        knowledgePoint: '指数函数求导', category: '导数', level: 'senior', difficulty: 2,
+        knowledgePoint: '指数函数求导', category: '导数', level: 'grade10', difficulty: 2,
       ),
       MathQuestion(
         question: '∫(2x)dx = ?',
@@ -1648,20 +1648,45 @@ class MathBank {
         correctIndex: 0,
         explanation: '∫xⁿdx=xⁿ⁺¹/(n+1)+C',
         steps: ['第1步：∫(2x)dx=2×x²/2+C', '第2步：=x²+C'],
-        knowledgePoint: '基本积分', category: '导数', level: 'senior', difficulty: 3,
+        knowledgePoint: '基本积分', category: '导数', level: 'grade10', difficulty: 3,
       ),
     ];
   }
 
   static List<MathQuestion> getAllQuestions() {
-    return [...getJuniorQuestions(), ...getSeniorQuestions()];
+    return [...getGrade7Questions(), ...getGrade10Questions()];
   }
 
-  static List<String> getJuniorCategories() {
-    return ['代数', '几何', '函数', '应用题', '统计'];
+  static List<MathQuestion> getGrade8Questions() {
+    return getGrade7Questions().map((q) => MathQuestion(
+      question: q.question, options: q.options, correctIndex: q.correctIndex,
+      explanation: q.explanation, steps: q.steps, knowledgePoint: q.knowledgePoint,
+      category: q.category, level: 'grade8', difficulty: q.difficulty,
+    )).toList();
+  }
+  static List<MathQuestion> getGrade9Questions() {
+    return getGrade7Questions().map((q) => MathQuestion(
+      question: q.question, options: q.options, correctIndex: q.correctIndex,
+      explanation: q.explanation, steps: q.steps, knowledgePoint: q.knowledgePoint,
+      category: q.category, level: 'grade9', difficulty: q.difficulty,
+    )).toList();
+  }
+  static List<MathQuestion> getGrade11Questions() {
+    return getGrade10Questions().map((q) => MathQuestion(
+      question: q.question, options: q.options, correctIndex: q.correctIndex,
+      explanation: q.explanation, steps: q.steps, knowledgePoint: q.knowledgePoint,
+      category: q.category, level: 'grade11', difficulty: q.difficulty,
+    )).toList();
+  }
+  static List<MathQuestion> getGrade12Questions() {
+    return getGrade10Questions().map((q) => MathQuestion(
+      question: q.question, options: q.options, correctIndex: q.correctIndex,
+      explanation: q.explanation, steps: q.steps, knowledgePoint: q.knowledgePoint,
+      category: q.category, level: 'grade12', difficulty: q.difficulty,
+    )).toList();
   }
 
-  static List<String> getSeniorCategories() {
-    return ['集合', '函数', '数列', '三角函数', '向量', '代数', '解析几何', '概率', '导数', '统计'];
+  static List<String> getCategoryList() {
+    return ['代数', '几何', '函数', '应用题', '统计', '集合', '数列', '三角函数', '向量', '解析几何', '概率', '导数'];
   }
 }

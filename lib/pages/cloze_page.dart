@@ -20,7 +20,7 @@ class _ClozePageState extends State<ClozePage> {
   int _correctCount = 0;
   int _totalDone = 0;
   bool _showTranslation = false;
-  String _selectedLevel = 'junior';
+  String _selectedLevel = 'grade7';
 
   @override
   void initState() {
@@ -28,6 +28,7 @@ class _ClozePageState extends State<ClozePage> {
     _tests = ClozeBank.getAllTests()
         .where((t) => t.level == _selectedLevel)
         .toList();
+    _restoreProgress();
   }
 
   void _switchLevel(String level) {
@@ -50,6 +51,35 @@ class _ClozePageState extends State<ClozePage> {
 
   ClozeTest get _currentTest =>
       _tests[_currentTestIndex % _tests.length];
+
+  Future<void> _restoreProgress() async {
+    final p = await StorageService.getClozeProgress();
+    if (p != null && mounted) {
+      final level = p['level'] as String?;
+      final tIdx = p['testIndex'] as int?;
+      final bIdx = p['blankIndex'] as int?;
+      if (level != null && tIdx != null && bIdx != null) {
+        final filtered = ClozeBank.getAllTests()
+            .where((t) => t.level == level).toList();
+        if (filtered.isNotEmpty && tIdx < filtered.length) {
+          final test = filtered[tIdx];
+          if (bIdx < test.blanks.length) {
+            setState(() {
+              _selectedLevel = level;
+              _tests = filtered;
+              _currentTestIndex = tIdx;
+              _currentBlankIndex = bIdx;
+            });
+          }
+        }
+      }
+    }
+  }
+
+  Future<void> _saveProgress() async {
+    await StorageService.saveClozeProgress(
+        _selectedLevel, _currentTestIndex, _currentBlankIndex);
+  }
 
   ClozeBlank get _currentBlank =>
       _currentTest.blanks[_currentBlankIndex];
@@ -91,6 +121,7 @@ class _ClozePageState extends State<ClozePage> {
       _selectedAnswer = null;
       _isCorrect = null;
     });
+    _saveProgress();
   }
 
   void _showResult() {
@@ -185,10 +216,15 @@ class _ClozePageState extends State<ClozePage> {
             padding: const EdgeInsets.fromLTRB(12, 12, 12, 4),
             child: Row(
               children: [
-                _buildLevelChip('junior', '📗 初中'),
-                const SizedBox(width: 8),
-                _buildLevelChip('senior', '📘 高中'),
-                const Spacer(),
+                Expanded(
+                  child: SizedBox(
+                    height: 36,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: _buildGradeChips(),
+                    ),
+                  ),
+                ),
                 Text(
                   '${_currentTestIndex + 1}/${_tests.length}',
                   style: const TextStyle(color: Colors.grey, fontSize: 13),
@@ -513,27 +549,33 @@ class _ClozePageState extends State<ClozePage> {
     );
   }
 
-  Widget _buildLevelChip(String level, String label) {
-    final isSelected = _selectedLevel == level;
-    return GestureDetector(
-      onTap: () => _switchLevel(level),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-        decoration: BoxDecoration(
-          color: isSelected
-              ? Theme.of(context).colorScheme.primary
-              : Colors.grey[200],
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Text(
-          label,
-          style: TextStyle(
-            color: isSelected ? Colors.white : Colors.black87,
-            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-            fontSize: 13,
+  List<Widget> _buildGradeChips() {
+    const grades = {
+      'grade7': '初一', 'grade8': '初二', 'grade9': '初三',
+      'grade10': '高一', 'grade11': '高二', 'grade12': '高三',
+    };
+    return grades.entries.map((e) {
+      final isSelected = _selectedLevel == e.key;
+      return Padding(
+        padding: const EdgeInsets.only(right: 6),
+        child: GestureDetector(
+          onTap: () => _switchLevel(e.key),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            decoration: BoxDecoration(
+              color: isSelected
+                  ? Theme.of(context).colorScheme.primary
+                  : Colors.grey[200],
+              borderRadius: BorderRadius.circular(18),
+            ),
+            child: Text(e.value, style: TextStyle(
+              color: isSelected ? Colors.white : Colors.black87,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+              fontSize: 13,
+            )),
           ),
         ),
-      ),
-    );
+      );
+    }).toList();
   }
 }

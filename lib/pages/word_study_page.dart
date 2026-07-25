@@ -17,7 +17,7 @@ class _WordStudyPageState extends State<WordStudyPage>
   late List<Word> _words;
   int _currentIndex = 0;
   bool _showChinese = false;
-  String _selectedLevel = 'junior';
+  String _selectedLevel = 'grade7';
   late TabController _tabController;
 
   // 单词测验模式
@@ -32,7 +32,8 @@ class _WordStudyPageState extends State<WordStudyPage>
   void initState() {
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
-    _words = WordBank.getJuniorWords()..shuffle(Random());
+    _words = WordBank.getGrade7Words()..shuffle(Random());
+    _restoreProgress();
   }
 
   @override
@@ -47,11 +48,39 @@ class _WordStudyPageState extends State<WordStudyPage>
       _currentIndex = 0;
       _showChinese = false;
       _isQuizMode = false;
-      final source = level == 'junior'
-          ? WordBank.getJuniorWords()
-          : WordBank.getSeniorWords();
-      _words = source..shuffle(Random());
+      _words = _getWordsForLevel(level)..shuffle(Random());
     });
+  }
+
+  List<Word> _getWordsForLevel(String level) {
+    switch (level) {
+      case 'grade7': return WordBank.getGrade7Words();
+      case 'grade8': return WordBank.getGrade8Words();
+      case 'grade9': return WordBank.getGrade9Words();
+      case 'grade10': return WordBank.getGrade10Words();
+      case 'grade11': return WordBank.getGrade11Words();
+      case 'grade12': return WordBank.getGrade12Words();
+      default: return WordBank.getGrade7Words();
+    }
+  }
+
+  Future<void> _restoreProgress() async {
+    final p = await StorageService.getWordProgress();
+    if (p != null && mounted) {
+      final level = p['level'] as String?;
+      final index = p['index'] as int?;
+      if (level != null && index != null && index > 0) {
+        setState(() {
+          _selectedLevel = level;
+          _words = _getWordsForLevel(level)..shuffle(Random());
+          _currentIndex = index.clamp(0, _words.length - 1);
+        });
+      }
+    }
+  }
+
+  Future<void> _saveProgress() async {
+    await StorageService.saveWordProgress(_selectedLevel, _currentIndex);
   }
 
   void _startQuiz() {
@@ -214,15 +243,15 @@ class _WordStudyPageState extends State<WordStudyPage>
 
     return Column(
       children: [
-        // 等级切换
+        // 年级切换
         Padding(
-          padding: const EdgeInsets.all(12),
-          child: Row(
-            children: [
-              _buildLevelChip('junior', '📗 初中词汇'),
-              const SizedBox(width: 8),
-              _buildLevelChip('senior', '📘 高中词汇'),
-            ],
+          padding: const EdgeInsets.fromLTRB(12, 12, 12, 4),
+          child: SizedBox(
+            height: 36,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: _buildGradeChips(),
+            ),
           ),
         ),
 
@@ -412,6 +441,7 @@ class _WordStudyPageState extends State<WordStudyPage>
                         _currentIndex++;
                         _showChinese = false;
                       });
+                      _saveProgress();
                     } else {
                       if (mounted) {
                         ScaffoldMessenger.of(context).showSnackBar(
@@ -461,6 +491,36 @@ class _WordStudyPageState extends State<WordStudyPage>
     );
   }
 
+  List<Widget> _buildGradeChips() {
+    const grades = {
+      'grade7': '初一', 'grade8': '初二', 'grade9': '初三',
+      'grade10': '高一', 'grade11': '高二', 'grade12': '高三',
+    };
+    return grades.entries.map((e) {
+      final isSelected = _selectedLevel == e.key;
+      return Padding(
+        padding: const EdgeInsets.only(right: 6),
+        child: GestureDetector(
+          onTap: () => _switchLevel(e.key),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            decoration: BoxDecoration(
+              color: isSelected
+                  ? Theme.of(context).colorScheme.primary
+                  : Colors.grey[200],
+              borderRadius: BorderRadius.circular(18),
+            ),
+            child: Text(e.value, style: TextStyle(
+              color: isSelected ? Colors.white : Colors.black87,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+              fontSize: 13,
+            )),
+          ),
+        ),
+      );
+    }).toList();
+  }
+
   Widget _buildQuizMode(ThemeData theme) {
     if (!_isQuizMode) {
       return Center(
@@ -485,11 +545,7 @@ class _WordStudyPageState extends State<WordStudyPage>
             const SizedBox(height: 12),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _buildLevelChip('junior', '📗 初中词汇'),
-                const SizedBox(width: 8),
-                _buildLevelChip('senior', '📘 高中词汇'),
-              ],
+              children: _buildGradeChips(),
             ),
           ],
         ),
