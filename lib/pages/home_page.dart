@@ -8,6 +8,8 @@ import 'wrong_topic_page.dart';
 import 'stats_page.dart';
 import 'formula_page.dart';
 import 'study_plan_page.dart';
+import 'writing_guide_page.dart';
+import 'knowledge_summary_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -163,6 +165,26 @@ class _HomePageState extends State<HomePage> {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) => const FormulaPage()),
+            ),
+          ),
+          _buildMenuItem(
+            icon: Icons.edit_note_rounded,
+            title: '作文引导',
+            subtitle: '审题思路 · 段落结构 · 衔接词',
+            color: const Color(0xFFE91E63),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const WritingGuidePage()),
+            ),
+          ),
+          _buildMenuItem(
+            icon: Icons.library_books_rounded,
+            title: '单元总结',
+            subtitle: '按知识点分组复习',
+            color: const Color(0xFF795548),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const KnowledgeSummaryPage()),
             ),
           ),
           _buildMenuItem(
