@@ -6,6 +6,8 @@ import 'cloze_page.dart';
 import 'grammar_page.dart';
 import 'wrong_topic_page.dart';
 import 'stats_page.dart';
+import 'formula_page.dart';
+import 'study_plan_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -71,7 +73,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          '帅舅舅',
+          '我爱减肥',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
         ),
         backgroundColor: theme.colorScheme.primary,
@@ -151,6 +153,26 @@ class _HomePageState extends State<HomePage> {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) => const StatsPage()),
+            ),
+          ),
+          _buildMenuItem(
+            icon: Icons.functions_rounded,
+            title: '公式速查',
+            subtitle: '数学公式 · 语法规则',
+            color: const Color(0xFF009688),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const FormulaPage()),
+            ),
+          ),
+          _buildMenuItem(
+            icon: Icons.edit_calendar_rounded,
+            title: '每日计划',
+            subtitle: '设定目标 · 查看进度',
+            color: const Color(0xFFFF5722),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const StudyPlanPage()),
             ),
           ),
         ],

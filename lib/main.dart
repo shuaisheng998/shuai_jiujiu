@@ -16,7 +16,7 @@ class ShuaiJiujiuApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '帅舅舅',
+      title: '我爱减肥',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(

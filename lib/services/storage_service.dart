@@ -14,6 +14,8 @@ class StorageService {
   static const _mathProgressKey = 'math_practice_progress';
   static const _grammarProgressKey = 'grammar_progress';
   static const _clozeProgressKey = 'cloze_progress';
+  static const _dailyWordGoalKey = 'daily_word_goal';
+  static const _dailyQuestionGoalKey = 'daily_question_goal';
 
   // ===== 打卡功能 =====
   static Future<List<String>> getCheckInDates() async {
@@ -227,5 +229,23 @@ class StorageService {
     } catch (_) {
       return null;
     }
+  }
+
+  // ===== 每日计划目标 =====
+  static Future<int> getDailyWordGoal() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getInt(_dailyWordGoalKey) ?? 20;
+  }
+  static Future<void> setDailyWordGoal(int goal) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt(_dailyWordGoalKey, goal);
+  }
+  static Future<int> getDailyQuestionGoal() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getInt(_dailyQuestionGoalKey) ?? 10;
+  }
+  static Future<void> setDailyQuestionGoal(int goal) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt(_dailyQuestionGoalKey, goal);
   }
 }

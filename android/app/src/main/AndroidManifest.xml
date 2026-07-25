@@ -4,7 +4,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
-        android:label="帅舅舅"
+        android:label="我爱减肥"
         android:name="${applicationName}">
 
         <activity
