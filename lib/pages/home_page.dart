@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
           _buildMenuItem(
             icon: Icons.menu_book_rounded,
             title: '英语单词',
-            subtitle: '初中词汇 · 高中词汇',
+            subtitle: '初一~高三 · 1500词汇',
             color: const Color(0xFF5C9CE6),
             onTap: () => Navigator.push(
               context,
