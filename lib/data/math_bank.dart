@@ -340,10 +340,6 @@ class MathBank {
           '',
           '💡 公式：S△ = ½ × a × h（a是底边长，h是底边上的高）',
         ],
-          '',
-          '💡 记忆公式：S = ½ × 底 × 高（底和高要互相垂直）',
-          '💡 单位：如果底和高用厘米，面积单位是平方厘米（cm²）',
-        ],
         knowledgePoint: '三角形面积公式：S = ½ × 底 × 高',
         category: '几何',
         level: 'grade7',
@@ -848,6 +844,7 @@ class MathBank {
           '',
           '💡 口诀：直角三角两锐角，和是90跑不了！',
         ],
+        knowledgePoint: '直角三角形两锐角互余（和为90°）',
         category: '几何', level: 'grade7', difficulty: 2,
       ),
       MathQuestion(
